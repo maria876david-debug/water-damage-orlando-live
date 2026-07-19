@@ -35,16 +35,43 @@ app.use((req, res, next) => {
     return next();
   }
 
-  // Strip /services/, /locations/, or /blog/ prefixes since files are flattened at root
+  // Strip /services/, /locations/, or /blog/ prefixes only if files are flattened at root
   if (originalPath.startsWith('/services/')) {
     const relativePart = originalPath.substring(10); // Length of '/services/'
-    req.url = '/' + relativePart + (req.url.slice(originalPath.length) || '');
+    const subfilePath = path.join(__dirname, 'services', relativePart);
+    const hasHtmlExt = relativePart.endsWith('.html');
+    const checkFile = hasHtmlExt ? subfilePath : `${subfilePath}.html`;
+    
+    if (!fs.existsSync(checkFile)) {
+      const rootCheckFile = path.join(__dirname, hasHtmlExt ? relativePart : `${relativePart}.html`);
+      if (fs.existsSync(rootCheckFile)) {
+        req.url = '/' + relativePart + (req.url.slice(originalPath.length) || '');
+      }
+    }
   } else if (originalPath.startsWith('/locations/')) {
     const relativePart = originalPath.substring(11); // Length of '/locations/'
-    req.url = '/' + relativePart + (req.url.slice(originalPath.length) || '');
+    const subfilePath = path.join(__dirname, 'locations', relativePart);
+    const hasHtmlExt = relativePart.endsWith('.html');
+    const checkFile = hasHtmlExt ? subfilePath : `${subfilePath}.html`;
+    
+    if (!fs.existsSync(checkFile)) {
+      const rootCheckFile = path.join(__dirname, hasHtmlExt ? relativePart : `${relativePart}.html`);
+      if (fs.existsSync(rootCheckFile)) {
+        req.url = '/' + relativePart + (req.url.slice(originalPath.length) || '');
+      }
+    }
   } else if (originalPath.startsWith('/blog/')) {
     const relativePart = originalPath.substring(6); // Length of '/blog/'
-    req.url = '/' + relativePart + (req.url.slice(originalPath.length) || '');
+    const subfilePath = path.join(__dirname, 'blog', relativePart);
+    const hasHtmlExt = relativePart.endsWith('.html');
+    const checkFile = hasHtmlExt ? subfilePath : `${subfilePath}.html`;
+    
+    if (!fs.existsSync(checkFile)) {
+      const rootCheckFile = path.join(__dirname, hasHtmlExt ? relativePart : `${relativePart}.html`);
+      if (fs.existsSync(rootCheckFile)) {
+        req.url = '/' + relativePart + (req.url.slice(originalPath.length) || '');
+      }
+    }
   }
 
   next();
