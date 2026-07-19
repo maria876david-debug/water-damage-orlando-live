@@ -1,11 +1,35 @@
-<div align="center">
+# waterdamagerestorationornald
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+This is a professional website for Orlando Rapid Restoration, specializing in services.
 
-  <h1>Built with AI Studio</h2>
+## Files Included
 
-  <p>The fastest path from prompt to production with Gemini.</p>
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+- `index.html` - Homepage
+- `about.html` - About page
+- `contact.html` - Contact page
+- `privacy-policy.html` - Privacy policy page
+- `services/` - Individual service pages
+- `locations/` - Individual location pages
+- `styles.css` - Stylesheet
+- `custom.js` - JavaScript functionality
+- `sitemap.xml` - SEO sitemap
+- `robots.txt` - Search engine directives
 
-</div>
+## Setup Instructions
+
+1. Upload all files to your web hosting provider
+2. Ensure all files are in the root directory
+3. Test the website functionality
+4. Update contact information as needed
+
+## Features
+
+- Responsive design
+- SEO optimized
+- Professional styling
+- Contact form functionality
+- Mobile-friendly navigation
+- Dynamic service and location pages
+
+Generated with Ranklocal - Professional website creation tool.

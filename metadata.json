@@ -1,0 +1,8 @@
+{
+  "name": "Orlando Water Damage Restoration",
+  "description": "Professional water damage restoration, mold remediation, and flood recovery services in Orlando, FL.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

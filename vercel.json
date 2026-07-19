@@ -1,0 +1,28 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/about.html", "destination": "/about", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/services.html", "destination": "/services", "permanent": true },
+    { "source": "/locations.html", "destination": "/locations", "permanent": true },
+    { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true },
+    { "source": "/blog.html", "destination": "/blog", "permanent": true },
+    { "source": "/services/water-damage-restoration", "destination": "/water-damage-restoration", "permanent": true },
+    { "source": "/services/flood-damage-restoration", "destination": "/flood-damage-restoration", "permanent": true },
+    { "source": "/services/mold-remediation", "destination": "/mold-remediation", "permanent": true },
+    { "source": "/services/fire-damage-restoration", "destination": "/fire-damage-restoration", "permanent": true },
+    { "source": "/services/storm-damage-restoration", "destination": "/storm-damage-restoration", "permanent": true },
+    { "source": "/services/sewage-cleanup", "destination": "/sewage-cleanup", "permanent": true },
+    { "source": "/services/emergency-water-extraction", "destination": "/emergency-water-extraction", "permanent": true },
+    { "source": "/services/structural-drying", "destination": "/structural-drying", "permanent": true },
+    { "source": "/services/dehumidification-services", "destination": "/dehumidification-services", "permanent": true },
+    { "source": "/services/contents-cleaning-and-restoration", "destination": "/contents-cleaning-and-restoration", "permanent": true },
+    { "source": "/locations/water-damage-restoration-in-downtown-orlando", "destination": "/water-damage-restoration-in-downtown-orlando", "permanent": true },
+    { "source": "/locations/water-damage-restoration-in-lake-nona", "destination": "/water-damage-restoration-in-lake-nona", "permanent": true },
+    { "source": "/locations/water-damage-restoration-in-winter-park", "destination": "/water-damage-restoration-in-winter-park", "permanent": true },
+    { "source": "/locations/water-damage-restoration-in-college-park", "destination": "/water-damage-restoration-in-college-park", "permanent": true },
+    { "source": "/locations/water-damage-restoration-in-mills-50-district", "destination": "/water-damage-restoration-in-mills-50-district", "permanent": true }
+  ]
+}
