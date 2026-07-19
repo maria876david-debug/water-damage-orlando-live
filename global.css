@@ -58,22 +58,18 @@
   --accent-glow: #8c5cff;
 }
 
-@layer base {
-  /* Universal mobile safety net — `overflow-x: clip` blocks any horizontal
+/* Universal mobile safety net — `overflow-x: clip` blocks any horizontal
    * scroll caused by an element escaping its container, without breaking
    * `position: sticky` (which `overflow: hidden` would). Applied to both
    * html and body for Safari < 16 fallback. ROADMAP-230. */
   html, body {
     overflow-x: clip;
+    background-color: var(--background) !important;
+    color: var(--foreground) !important;
   }
   h1, h2, h3, h4, h5, h6, p, span, a, li {
     overflow-wrap: anywhere;
     word-wrap: break-word;
-  }
-
-  body {
-    background-color: var(--background);
-    color: var(--foreground);
   }
 
   .btn-primary {
@@ -290,4 +286,3 @@
       transform: translateY(15px);
     }
   }
-}
