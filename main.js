@@ -18,9 +18,9 @@
       const logoElement = document.querySelector(".header-logo");
       if (logoElement) {
         if (ud_header.classList.contains("sticky")) {
-          logoElement.src = "assets/images/logo/logo.svg";
+          logoElement.src = "/shape-1.svg";
         } else {
-          logoElement.src = "assets/images/logo/logo-white.svg";
+          logoElement.src = "/shape-1.svg";
         }
       }
     }
