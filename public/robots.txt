@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://www.waterdamagerestorationorlando.us/sitemap_index.xml
 Sitemap: https://www.waterdamagerestorationorlando.us/sitemap.xml

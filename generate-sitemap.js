@@ -40,7 +40,6 @@ function getRouteInfo(filePath) {
   let loc = canonicalMatch ? canonicalMatch[1].trim() : null;
 
   if (!loc) {
-    // Derive from filepath
     const relative = path.relative(__dirname, filePath).replace(/\\/g, '/');
     let cleanPath = relative.replace(/\.html$/, '');
     if (cleanPath === 'index') cleanPath = '';
@@ -64,24 +63,43 @@ function getRouteInfo(filePath) {
     changefreq = 'daily';
   } else if (['/about', '/services', '/locations', '/blog', '/contact'].includes(pathName)) {
     priority = '0.8';
-    changefreq = 'weekly';
-  } else if (pathName.startsWith('/services/') || pathName.startsWith('/locations/')) {
+    changefreq = 'monthly';
+  } else if (pathName.startsWith('/services/')) {
     priority = '0.9';
     changefreq = 'monthly';
+  } else if (pathName.startsWith('/locations/')) {
+    priority = '0.8';
+    changefreq = 'monthly';
   } else if (pathName.startsWith('/blog/')) {
-    priority = '0.7';
+    priority = '0.6';
     changefreq = 'monthly';
   } else if (pathName === '/privacy-policy') {
     priority = '0.3';
-    changefreq = 'yearly';
+    changefreq = 'monthly';
   }
 
   return {
     loc,
+    pathName,
     lastmod: getTodayDate(),
     changefreq,
     priority
   };
+}
+
+function createUrlSetXml(routes) {
+  const xmlUrls = routes.map(r => `    <url>
+        <loc>${r.loc}</loc>
+        <lastmod>${r.lastmod}</lastmod>
+        <changefreq>${r.changefreq}</changefreq>
+        <priority>${r.priority}</priority>
+    </url>`).join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${xmlUrls}
+</urlset>
+`;
 }
 
 function generateSitemap() {
@@ -95,79 +113,104 @@ function generateSitemap() {
     }
   });
 
-  // Sort routes logically
-  const routes = Array.from(routesMap.values()).sort((a, b) => {
+  const today = getTodayDate();
+
+  // Categorize routes
+  const pageRoutes = [];
+  const postRoutes = [];
+  const serviceRoutes = [];
+  const locationRoutes = [];
+
+  routesMap.forEach(r => {
+    if (r.pathName.startsWith('/blog/')) {
+      postRoutes.push(r);
+    } else if (r.pathName.startsWith('/services/')) {
+      serviceRoutes.push(r);
+    } else if (r.pathName.startsWith('/locations/')) {
+      locationRoutes.push(r);
+    } else {
+      pageRoutes.push(r);
+    }
+  });
+
+  // Sort helper
+  const sortRoutes = (arr) => arr.sort((a, b) => {
     if (a.loc === `${DOMAIN}/`) return -1;
     if (b.loc === `${DOMAIN}/`) return 1;
     return b.priority.localeCompare(a.priority) || a.loc.localeCompare(b.loc);
   });
 
-  const xmlUrls = routes.map(r => `    <url>
-        <loc>${r.loc}</loc>
-        <lastmod>${r.lastmod}</lastmod>
-        <changefreq>${r.changefreq}</changefreq>
-        <priority>${r.priority}</priority>
-    </url>`).join('\n');
+  const pageSitemapXml = createUrlSetXml(sortRoutes(pageRoutes));
+  const postSitemapXml = createUrlSetXml(sortRoutes(postRoutes));
+  const serviceSitemapXml = createUrlSetXml(sortRoutes(serviceRoutes));
+  const locationSitemapXml = createUrlSetXml(sortRoutes(locationRoutes));
 
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${xmlUrls}
-</urlset>
+  const sitemapIndexXml = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>${DOMAIN}/page-sitemap.xml</loc>
+        <lastmod>${today}</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>${DOMAIN}/post-sitemap.xml</loc>
+        <lastmod>${today}</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>${DOMAIN}/service-sitemap.xml</loc>
+        <lastmod>${today}</lastmod>
+    </sitemap>
+    <sitemap>
+        <loc>${DOMAIN}/location-sitemap.xml</loc>
+        <lastmod>${today}</lastmod>
+    </sitemap>
+</sitemapindex>
 `;
 
   const robotsTxt = `User-agent: *
 Allow: /
 
+Sitemap: ${DOMAIN}/sitemap_index.xml
 Sitemap: ${DOMAIN}/sitemap.xml
 `;
 
-  // Ensure directories exist
+  const sitemapFiles = {
+    'sitemap_index.xml': sitemapIndexXml,
+    'sitemap.xml': sitemapIndexXml,
+    'page-sitemap.xml': pageSitemapXml,
+    'post-sitemap.xml': postSitemapXml,
+    'service-sitemap.xml': serviceSitemapXml,
+    'location-sitemap.xml': locationSitemapXml,
+    'robots.txt': robotsTxt
+  };
+
   const publicDir = path.join(__dirname, 'public');
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });
   }
 
-  // Cleanup old obsolete sitemap files if present
-  const obsoleteFiles = ['page-sitemap.xml', 'post-sitemap.xml'];
-  const searchDirs = [__dirname, publicDir];
   const distDir = path.join(__dirname, 'dist');
-  if (fs.existsSync(distDir)) {
-    searchDirs.push(distDir, path.join(distDir, 'public'));
+  const distPublicDir = path.join(distDir, 'public');
+
+  if (fs.existsSync(distDir) && !fs.existsSync(distPublicDir)) {
+    fs.mkdirSync(distPublicDir, { recursive: true });
   }
 
-  searchDirs.forEach(dir => {
-    if (fs.existsSync(dir)) {
-      obsoleteFiles.forEach(file => {
-        const p = path.join(dir, file);
-        if (fs.existsSync(p)) {
-          try { fs.unlinkSync(p); } catch (e) {}
-        }
-      });
+  Object.entries(sitemapFiles).forEach(([fileName, content]) => {
+    fs.writeFileSync(path.join(publicDir, fileName), content, 'utf8');
+    fs.writeFileSync(path.join(__dirname, fileName), content, 'utf8');
+
+    if (fs.existsSync(distDir)) {
+      fs.writeFileSync(path.join(distDir, fileName), content, 'utf8');
+      fs.writeFileSync(path.join(distPublicDir, fileName), content, 'utf8');
     }
   });
 
-  // Write sitemap.xml and robots.txt to public/
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapXml, 'utf8');
-  fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt, 'utf8');
-
-  // Write sitemap.xml and robots.txt to root for direct local/dev serving
-  fs.writeFileSync(path.join(__dirname, 'sitemap.xml'), sitemapXml, 'utf8');
-  fs.writeFileSync(path.join(__dirname, 'robots.txt'), robotsTxt, 'utf8');
-
-  // If dist/ directory exists or if dist/public/ exists, populate them too
-  if (fs.existsSync(distDir)) {
-    fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapXml, 'utf8');
-    fs.writeFileSync(path.join(distDir, 'robots.txt'), robotsTxt, 'utf8');
-
-    const distPublicDir = path.join(distDir, 'public');
-    if (!fs.existsSync(distPublicDir)) {
-      fs.mkdirSync(distPublicDir, { recursive: true });
-    }
-    fs.writeFileSync(path.join(distPublicDir, 'sitemap.xml'), sitemapXml, 'utf8');
-    fs.writeFileSync(path.join(distPublicDir, 'robots.txt'), robotsTxt, 'utf8');
-  }
-
-  console.log(`Successfully generated sitemap.xml with ${routes.length} URLs and robots.txt!`);
+  console.log(`Successfully generated WordPress-style multi-sitemap structure:`);
+  console.log(` - page-sitemap.xml: ${pageRoutes.length} pages`);
+  console.log(` - post-sitemap.xml: ${postRoutes.length} blog posts`);
+  console.log(` - service-sitemap.xml: ${serviceRoutes.length} service pages`);
+  console.log(` - location-sitemap.xml: ${locationRoutes.length} location pages`);
+  console.log(` - sitemap_index.xml & sitemap.xml generated successfully!`);
 }
 
 generateSitemap();
