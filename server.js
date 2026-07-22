@@ -35,63 +35,91 @@ app.use((req, res, next) => {
     return next();
   }
 
-  // Strip /services/, /locations/, or /blog/ prefixes only if files are flattened at root
-  if (originalPath.startsWith('/services/')) {
-    const relativePart = originalPath.substring(10); // Length of '/services/'
-    const subfilePath = path.join(__dirname, 'services', relativePart);
-    const hasHtmlExt = relativePart.endsWith('.html');
-    const checkFile = hasHtmlExt ? subfilePath : `${subfilePath}.html`;
-    
-    if (!fs.existsSync(checkFile)) {
-      const rootCheckFile = path.join(__dirname, hasHtmlExt ? relativePart : `${relativePart}.html`);
-      if (fs.existsSync(rootCheckFile)) {
-        req.url = '/' + relativePart + (req.url.slice(originalPath.length) || '');
-      }
-    }
-  } else if (originalPath.startsWith('/locations/')) {
-    const relativePart = originalPath.substring(11); // Length of '/locations/'
-    const subfilePath = path.join(__dirname, 'locations', relativePart);
-    const hasHtmlExt = relativePart.endsWith('.html');
-    const checkFile = hasHtmlExt ? subfilePath : `${subfilePath}.html`;
-    
-    if (!fs.existsSync(checkFile)) {
-      const rootCheckFile = path.join(__dirname, hasHtmlExt ? relativePart : `${relativePart}.html`);
-      if (fs.existsSync(rootCheckFile)) {
-        req.url = '/' + relativePart + (req.url.slice(originalPath.length) || '');
-      }
-    }
-  } else if (originalPath.startsWith('/blog/')) {
-    const relativePart = originalPath.substring(6); // Length of '/blog/'
-    const subfilePath = path.join(__dirname, 'blog', relativePart);
-    const hasHtmlExt = relativePart.endsWith('.html');
-    const checkFile = hasHtmlExt ? subfilePath : `${subfilePath}.html`;
-    
-    if (!fs.existsSync(checkFile)) {
-      const rootCheckFile = path.join(__dirname, hasHtmlExt ? relativePart : `${relativePart}.html`);
-      if (fs.existsSync(rootCheckFile)) {
-        req.url = '/' + relativePart + (req.url.slice(originalPath.length) || '');
-      }
-    }
-  }
-
   next();
 });
 
-// 2. Redirect middleware for Clean URLs (Redirecting xxx.html to /xxx)
+// Build dynamic route & redirect maps from HTML canonical tags
+function buildRouteMaps() {
+  const canonicalMap = {}; // cleanPath -> absoluteFilePath
+  const redirectMap = {};  // redirectSource -> cleanPath
+
+  function getHtmlFiles(dir) {
+    let results = [];
+    const list = fs.readdirSync(dir);
+    list.forEach(file => {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      if (stat && stat.isDirectory()) {
+        if (file !== 'node_modules' && file !== '.git' && file !== 'dist' && file !== 'public') {
+          results = results.concat(getHtmlFiles(filePath));
+        }
+      } else if (file.endsWith('.html')) {
+        results.push(filePath);
+      }
+    });
+    return results;
+  }
+
+  const files = getHtmlFiles(__dirname);
+
+  files.forEach(file => {
+    const rel = path.relative(__dirname, file).split(path.sep).join('/');
+    const content = fs.readFileSync(file, 'utf8');
+    const m = content.match(/<link\s+rel=[\"']canonical[\"']\s+href=[\"']([^\"']*)[\"']/i);
+    if (!m) return;
+    
+    const canonicalFull = m[1].trim();
+    const cleanPath = canonicalFull.replace('https://www.waterdamagerestorationorlando.us', '') || '/';
+
+    canonicalMap[cleanPath] = file;
+
+    const baseName = path.basename(rel, '.html');
+    const sources = [
+      '/' + rel,
+      '/' + baseName,
+      '/' + baseName + '.html'
+    ];
+    if (rel === 'index.html') {
+      sources.push('/index.html', '/index');
+    } else {
+      sources.push('/' + rel.replace(/\.html$/, ''));
+    }
+
+    sources.forEach(s => {
+      if (s !== cleanPath) {
+        redirectMap[s] = cleanPath;
+      }
+    });
+  });
+
+  return { canonicalMap, redirectMap };
+}
+
+const { canonicalMap, redirectMap } = buildRouteMaps();
+
+// 2. Redirect middleware for 301 Permanent Redirects to clean canonical URLs
 app.use((req, res, next) => {
   const urlPath = req.path;
 
-  // Clean trailing slash (unless root)
+  // Clean trailing slash (unless root /)
   if (urlPath.length > 1 && urlPath.endsWith('/')) {
     const cleanPath = urlPath.slice(0, -1);
     const query = req.url.slice(urlPath.length) || '';
-    return res.redirect(301, cleanPath + query);
+    const destination = redirectMap[cleanPath] || cleanPath;
+    return res.redirect(301, destination + query);
   }
 
-  // If request ends with .html, redirect to the clean path (except for actual file paths that are assets)
+  // Check if URL is in 301 redirect map
+  if (redirectMap[urlPath]) {
+    const destination = redirectMap[urlPath];
+    const query = req.url.slice(urlPath.length) || '';
+    return res.redirect(301, destination + query);
+  }
+
+  // Handle any other .html request
   if (urlPath.endsWith('.html')) {
     const cleanPath = urlPath.slice(0, -5);
-    const destination = cleanPath === '/index' ? '/' : cleanPath;
+    const destination = cleanPath === '/index' ? '/' : (redirectMap[cleanPath] || cleanPath);
     const query = req.url.slice(urlPath.length) || '';
     return res.redirect(301, destination + query);
   }
@@ -103,17 +131,14 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   const urlPath = req.path;
 
-  // If the path has a file extension, let express.static handle it
-  if (path.extname(urlPath)) {
-    return next();
+  // If serving known canonical clean path
+  if (canonicalMap[urlPath]) {
+    return res.sendFile(canonicalMap[urlPath]);
   }
 
-  // Determine which HTML file to serve
-  const targetFile = urlPath === '/' ? 'index.html' : `${urlPath.substring(1)}.html`;
-  const filePath = path.join(__dirname, targetFile);
-
-  if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
-    return res.sendFile(filePath);
+  // If path has extension, let static handler take it
+  if (path.extname(urlPath)) {
+    return next();
   }
 
   next();

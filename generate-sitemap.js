@@ -127,6 +127,25 @@ Sitemap: ${DOMAIN}/sitemap.xml
     fs.mkdirSync(publicDir, { recursive: true });
   }
 
+  // Cleanup old obsolete sitemap files if present
+  const obsoleteFiles = ['page-sitemap.xml', 'post-sitemap.xml'];
+  const searchDirs = [__dirname, publicDir];
+  const distDir = path.join(__dirname, 'dist');
+  if (fs.existsSync(distDir)) {
+    searchDirs.push(distDir, path.join(distDir, 'public'));
+  }
+
+  searchDirs.forEach(dir => {
+    if (fs.existsSync(dir)) {
+      obsoleteFiles.forEach(file => {
+        const p = path.join(dir, file);
+        if (fs.existsSync(p)) {
+          try { fs.unlinkSync(p); } catch (e) {}
+        }
+      });
+    }
+  });
+
   // Write sitemap.xml and robots.txt to public/
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapXml, 'utf8');
   fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt, 'utf8');
@@ -136,7 +155,6 @@ Sitemap: ${DOMAIN}/sitemap.xml
   fs.writeFileSync(path.join(__dirname, 'robots.txt'), robotsTxt, 'utf8');
 
   // If dist/ directory exists or if dist/public/ exists, populate them too
-  const distDir = path.join(__dirname, 'dist');
   if (fs.existsSync(distDir)) {
     fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapXml, 'utf8');
     fs.writeFileSync(path.join(distDir, 'robots.txt'), robotsTxt, 'utf8');
