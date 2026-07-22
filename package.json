@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "node server.js",
-    "build": "echo 'Static site, no build required'",
+    "build": "node generate-sitemap.js",
     "start": "node server.js",
     "lint": "echo 'No linting required'"
   },

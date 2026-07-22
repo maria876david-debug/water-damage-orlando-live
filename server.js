@@ -120,6 +120,7 @@ app.use((req, res, next) => {
 });
 
 // 4. Static files serving
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(__dirname));
 
 // 5. Custom 404 handler
