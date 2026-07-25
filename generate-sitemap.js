@@ -191,19 +191,39 @@ Sitemap: ${DOMAIN}/sitemap.xml
   const distDir = path.join(__dirname, 'dist');
   const distPublicDir = path.join(distDir, 'public');
 
-  if (fs.existsSync(distDir) && !fs.existsSync(distPublicDir)) {
+  if (!fs.existsSync(distDir)) {
+    fs.mkdirSync(distDir, { recursive: true });
+  }
+  if (!fs.existsSync(distPublicDir)) {
     fs.mkdirSync(distPublicDir, { recursive: true });
   }
 
   Object.entries(sitemapFiles).forEach(([fileName, content]) => {
     fs.writeFileSync(path.join(publicDir, fileName), content, 'utf8');
     fs.writeFileSync(path.join(__dirname, fileName), content, 'utf8');
-
-    if (fs.existsSync(distDir)) {
-      fs.writeFileSync(path.join(distDir, fileName), content, 'utf8');
-      fs.writeFileSync(path.join(distPublicDir, fileName), content, 'utf8');
-    }
+    fs.writeFileSync(path.join(distDir, fileName), content, 'utf8');
+    fs.writeFileSync(path.join(distPublicDir, fileName), content, 'utf8');
   });
+
+  // Copy static website files to dist/ for static hosting deployments (Vercel/Netlify)
+  function copyStaticFiles(src, dest) {
+    if (!fs.existsSync(dest)) fs.mkdirSync(dest, { recursive: true });
+    const entries = fs.readdirSync(src, { withFileTypes: true });
+    for (const entry of entries) {
+      if (['node_modules', '.git', 'dist'].includes(entry.name)) continue;
+      const srcPath = path.join(src, entry.name);
+      const destPath = path.join(dest, entry.name);
+      if (entry.isDirectory()) {
+        copyStaticFiles(srcPath, destPath);
+      } else {
+        const ext = path.extname(entry.name).toLowerCase();
+        if (['.html', '.css', '.js', '.png', '.jpg', '.jpeg', '.svg', '.ico', '.xml', '.txt', '.json'].includes(ext)) {
+          fs.copyFileSync(srcPath, destPath);
+        }
+      }
+    }
+  }
+  copyStaticFiles(__dirname, distDir);
 
   console.log(`Successfully generated WordPress-style multi-sitemap structure:`);
   console.log(` - page-sitemap.xml: ${pageRoutes.length} pages`);
