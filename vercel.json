@@ -1,5 +1,4 @@
 {
-  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
@@ -9,6 +8,47 @@
     { "source": "/services.html", "destination": "/services", "permanent": true },
     { "source": "/locations.html", "destination": "/locations", "permanent": true },
     { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true },
-    { "source": "/blog.html", "destination": "/blog", "permanent": true }
+    { "source": "/blog.html", "destination": "/blog", "permanent": true },
+
+    { "source": "/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes.html", "destination": "/blog/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes", "permanent": true },
+    { "source": "/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes", "destination": "/blog/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes", "permanent": true },
+    { "source": "/how-to-choose-the-right-flood-damage-restoration-service-in-orlando.html", "destination": "/blog/how-to-choose-the-right-flood-damage-restoration-service-in-orlando", "permanent": true },
+    { "source": "/how-to-choose-the-right-flood-damage-restoration-service-in-orlando", "destination": "/blog/how-to-choose-the-right-flood-damage-restoration-service-in-orlando", "permanent": true },
+    { "source": "/why-is-my-water-damage-restoration-taking-so-long-in-orlando.html", "destination": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando", "permanent": true },
+    { "source": "/why-is-my-water-damage-restoration-taking-so-long-in-orlando", "destination": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando", "permanent": true },
+    { "source": "/first-24-hours-burst-pipe-orlando.html", "destination": "/blog/first-24-hours-burst-pipe-orlando", "permanent": true },
+    { "source": "/first-24-hours-burst-pipe-orlando", "destination": "/blog/first-24-hours-burst-pipe-orlando", "permanent": true },
+
+    { "source": "/water-damage-restoration-in-college-park.html", "destination": "/locations/water-damage-restoration-in-college-park", "permanent": true },
+    { "source": "/water-damage-restoration-in-college-park", "destination": "/locations/water-damage-restoration-in-college-park", "permanent": true },
+    { "source": "/water-damage-restoration-in-downtown-orlando.html", "destination": "/locations/water-damage-restoration-in-downtown-orlando", "permanent": true },
+    { "source": "/water-damage-restoration-in-downtown-orlando", "destination": "/locations/water-damage-restoration-in-downtown-orlando", "permanent": true },
+    { "source": "/water-damage-restoration-in-lake-nona.html", "destination": "/locations/water-damage-restoration-in-lake-nona", "permanent": true },
+    { "source": "/water-damage-restoration-in-lake-nona", "destination": "/locations/water-damage-restoration-in-lake-nona", "permanent": true },
+    { "source": "/water-damage-restoration-in-mills-50-district.html", "destination": "/locations/water-damage-restoration-in-mills-50-district", "permanent": true },
+    { "source": "/water-damage-restoration-in-mills-50-district", "destination": "/locations/water-damage-restoration-in-mills-50-district", "permanent": true },
+    { "source": "/water-damage-restoration-in-winter-park.html", "destination": "/locations/water-damage-restoration-in-winter-park", "permanent": true },
+    { "source": "/water-damage-restoration-in-winter-park", "destination": "/locations/water-damage-restoration-in-winter-park", "permanent": true },
+
+    { "source": "/contents-cleaning-and-restoration.html", "destination": "/services/contents-cleaning-and-restoration", "permanent": true },
+    { "source": "/contents-cleaning-and-restoration", "destination": "/services/contents-cleaning-and-restoration", "permanent": true },
+    { "source": "/dehumidification-services.html", "destination": "/services/dehumidification-services", "permanent": true },
+    { "source": "/dehumidification-services", "destination": "/services/dehumidification-services", "permanent": true },
+    { "source": "/emergency-water-extraction.html", "destination": "/services/emergency-water-extraction", "permanent": true },
+    { "source": "/emergency-water-extraction", "destination": "/services/emergency-water-extraction", "permanent": true },
+    { "source": "/fire-damage-restoration.html", "destination": "/services/fire-damage-restoration", "permanent": true },
+    { "source": "/fire-damage-restoration", "destination": "/services/fire-damage-restoration", "permanent": true },
+    { "source": "/flood-damage-restoration.html", "destination": "/services/flood-damage-restoration", "permanent": true },
+    { "source": "/flood-damage-restoration", "destination": "/services/flood-damage-restoration", "permanent": true },
+    { "source": "/mold-remediation.html", "destination": "/services/mold-remediation", "permanent": true },
+    { "source": "/mold-remediation", "destination": "/services/mold-remediation", "permanent": true },
+    { "source": "/sewage-cleanup.html", "destination": "/services/sewage-cleanup", "permanent": true },
+    { "source": "/sewage-cleanup", "destination": "/services/sewage-cleanup", "permanent": true },
+    { "source": "/storm-damage-restoration.html", "destination": "/services/storm-damage-restoration", "permanent": true },
+    { "source": "/storm-damage-restoration", "destination": "/services/storm-damage-restoration", "permanent": true },
+    { "source": "/structural-drying.html", "destination": "/services/structural-drying", "permanent": true },
+    { "source": "/structural-drying", "destination": "/services/structural-drying", "permanent": true },
+    { "source": "/water-damage-restoration.html", "destination": "/services/water-damage-restoration", "permanent": true },
+    { "source": "/water-damage-restoration", "destination": "/services/water-damage-restoration", "permanent": true }
   ]
 }
