@@ -78,10 +78,16 @@ function getRouteInfo(filePath) {
     changefreq = 'monthly';
   }
 
+  let lastmod = getTodayDate();
+  const dateModMatch = content.match(/"dateModified":\s*"([^"]*)"/i) || content.match(/"datePublished":\s*"([^"]*)"/i);
+  if (dateModMatch && dateModMatch[1] && /^\d{4}-\d{2}-\d{2}$/.test(dateModMatch[1])) {
+    lastmod = dateModMatch[1];
+  }
+
   return {
     loc,
     pathName,
-    lastmod: getTodayDate(),
+    lastmod,
     changefreq,
     priority
   };
