@@ -189,14 +189,13 @@ Sitemap: ${DOMAIN}/sitemap.xml
   }
 
   const distDir = path.join(__dirname, 'dist');
+  if (fs.existsSync(distDir)) {
+    fs.rmSync(distDir, { recursive: true, force: true });
+  }
   const distPublicDir = path.join(distDir, 'public');
 
-  if (!fs.existsSync(distDir)) {
-    fs.mkdirSync(distDir, { recursive: true });
-  }
-  if (!fs.existsSync(distPublicDir)) {
-    fs.mkdirSync(distPublicDir, { recursive: true });
-  }
+  fs.mkdirSync(distDir, { recursive: true });
+  fs.mkdirSync(distPublicDir, { recursive: true });
 
   Object.entries(sitemapFiles).forEach(([fileName, content]) => {
     fs.writeFileSync(path.join(publicDir, fileName), content, 'utf8');
