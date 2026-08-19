@@ -73,7 +73,7 @@ function getRouteInfo(filePath) {
   } else if (pathName.startsWith('/blog/')) {
     priority = '0.6';
     changefreq = 'monthly';
-  } else if (pathName === '/privacy-policy') {
+  } else if (pathName === '/privacy-policy' || pathName === '/terms-of-service') {
     priority = '0.3';
     changefreq = 'monthly';
   }

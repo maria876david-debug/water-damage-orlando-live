@@ -38,8 +38,8 @@ export default function HomePage() {
 
       {/* 2. Sticky Header */}
       <header className="sticky top-[37px] z-40 bg-[#F5F6EF]/95 backdrop-blur-md border-b border-[#DBDFD1]">
-        <div className="max-w-[1180px] mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-3 group">
+        <div className="max-w-[1180px] mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
+          <a href="/" className="flex items-center gap-3 shrink-0 group">
             <div className="w-10 h-10 rounded-lg bg-[#16302A] flex items-center justify-center text-[#E8A33D] font-['Big_Shoulders_Display',sans-serif] text-2xl font-black transition-transform group-hover:scale-105">
               OR
             </div>
@@ -53,28 +53,26 @@ export default function HomePage() {
             </div>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-[#1D3F37]">
+          {/* Desktop Navigation: Max 5 items */}
+          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-[#1D3F37] whitespace-nowrap">
             <a href="#services" className="hover:text-[#E8A33D] transition-colors">Services</a>
-            <a href="#process" className="hover:text-[#E8A33D] transition-colors">Our Process</a>
-            <a href="#insurance-health" className="hover:text-[#E8A33D] transition-colors">Insurance &amp; Health</a>
             <a href="#service-areas" className="hover:text-[#E8A33D] transition-colors">Service Areas</a>
-            <a href="#find-us" className="hover:text-[#E8A33D] transition-colors">Find Us</a>
-            <a href="#faq" className="hover:text-[#E8A33D] transition-colors">FAQ</a>
+            <a href="/blog" className="hover:text-[#E8A33D] transition-colors">Blog</a>
+            <a href="/about" className="hover:text-[#E8A33D] transition-colors">About</a>
+            <a href="/contact" className="hover:text-[#E8A33D] transition-colors">Contact</a>
           </nav>
 
-          {/* Header Action Button */}
-          <div className="hidden sm:flex items-center gap-4">
+          {/* Right Side: Phone + CTA */}
+          <div className="hidden sm:flex items-center gap-4 shrink-0">
             <a 
               href="tel:+14075579924" 
-              className="text-right hidden md:block"
+              className="text-right hidden xl:block"
             >
-              <span className="block text-[11px] font-['IBM_Plex_Mono',monospace] uppercase text-[#4C594E] tracking-wider">Direct Dispatch Line</span>
               <span className="block text-base font-bold text-[#16302A] hover:text-[#B3502E] font-['IBM_Plex_Mono',monospace]">(407) 557-9924</span>
             </a>
             <a 
               href="tel:+14075579924" 
-              className="bg-[#E8A33D] hover:bg-[#C4831F] text-[#16302A] px-5 py-2.5 rounded-md font-bold text-sm uppercase tracking-wider transition-colors shadow-sm inline-flex items-center gap-2"
+              className="bg-[#E8A33D] hover:bg-[#C4831F] text-[#16302A] px-5 py-2.5 rounded-md font-bold text-sm uppercase tracking-wider transition-colors shadow-sm inline-flex items-center gap-2 whitespace-nowrap"
             >
               <svg className="w-4 h-4 text-[#16302A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -105,11 +103,10 @@ export default function HomePage() {
           <div className="lg:hidden bg-[#EAEBE0] border-b border-[#DBDFD1] px-6 py-5 space-y-4">
             <nav className="flex flex-col space-y-3 font-semibold text-[#16302A]">
               <a href="#services" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#E8A33D] py-1">Services</a>
-              <a href="#process" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#E8A33D] py-1">Our Process</a>
-              <a href="#insurance-health" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#E8A33D] py-1">Insurance &amp; Health</a>
               <a href="#service-areas" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#E8A33D] py-1">Service Areas</a>
-              <a href="#find-us" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#E8A33D] py-1">Find Us</a>
-              <a href="#faq" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#E8A33D] py-1">FAQ</a>
+              <a href="/blog" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#E8A33D] py-1">Blog</a>
+              <a href="/about" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#E8A33D] py-1">About</a>
+              <a href="/contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#E8A33D] py-1">Contact</a>
             </nav>
             <div className="pt-3 border-t border-[#DBDFD1] flex flex-col gap-3">
               <a 
@@ -1583,14 +1580,15 @@ export default function HomePage() {
             {/* Col 3: Company Links & Legal */}
             <div className="lg:col-span-3 space-y-3">
               <span className="font-['Big_Shoulders_Display',sans-serif] text-xl font-bold uppercase text-[#E8A33D] block">
-                Company &amp; Areas
+                Company &amp; Legal
               </span>
               <ul className="space-y-2 text-xs text-[#F5F6EF]/80">
                 <li><a href="/about" className="hover:text-[#E8A33D] transition-colors">About Our Team</a></li>
                 <li><a href="/locations" className="hover:text-[#E8A33D] transition-colors">Orange County Service Areas</a></li>
                 <li><a href="/blog" className="hover:text-[#E8A33D] transition-colors">Restoration Guides &amp; Insights</a></li>
-                <li><a href="/contact" className="hover:text-[#E8A33D] transition-colors">Contact &amp; Directions</a></li>
+                <li><a href="/contact" className="hover:text-[#E8A33D] transition-colors">Contact &amp; Map</a></li>
                 <li><a href="/privacy-policy" className="hover:text-[#E8A33D] transition-colors">Privacy Policy</a></li>
+                <li><a href="/terms-of-service" className="hover:text-[#E8A33D] transition-colors">Terms of Service</a></li>
               </ul>
             </div>
           </div>

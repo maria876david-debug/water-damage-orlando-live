@@ -9,6 +9,7 @@
     { "source": "/services.html", "destination": "/services", "permanent": true },
     { "source": "/locations.html", "destination": "/locations", "permanent": true },
     { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true },
+    { "source": "/terms-of-service.html", "destination": "/terms-of-service", "permanent": true },
     { "source": "/blog.html", "destination": "/blog", "permanent": true },
 
     { "source": "/services/:slug.html", "destination": "/services/:slug", "permanent": true },
