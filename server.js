@@ -25,9 +25,9 @@ app.use((req, res, next) => {
     return next();
   }
 
-  // Rewrite favicon and logos to valid root assets
-  if (originalPath === '/assets/images/favicon.png' || originalPath === '/assets/images/favicon.ico' || originalPath === '/favicon.ico') {
-    req.url = '/favicon.png';
+  // Rewrite legacy asset paths if requested
+  if (originalPath === '/assets/images/favicon.png' || originalPath === '/assets/images/favicon.ico') {
+    req.url = '/favicon.ico';
     return next();
   }
   if (originalPath === '/assets/images/logo/logo.svg' || originalPath === '/assets/images/logo/logo-white.svg') {

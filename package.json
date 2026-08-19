@@ -4,11 +4,13 @@
   "type": "module",
   "scripts": {
     "dev": "node server.js",
-    "build": "node generate-sitemap.js",
+    "build": "node build-favicons.js && node generate-sitemap.js",
     "start": "node server.js",
     "lint": "echo 'No linting required'"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "png-to-ico": "^3.0.2",
+    "sharp": "^0.35.3"
   }
 }
