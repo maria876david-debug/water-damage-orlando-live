@@ -25,6 +25,11 @@ export default function HomePage() {
             <span>Central Florida sub-tropical humidity &amp; 24–48h mold growth threshold active.</span>
           </div>
           <div className="flex items-center gap-3">
+            <div className="hidden sm:flex items-center gap-2 text-[11px] text-[#4C594E]">
+              <a href="/privacy-policy" className="hover:text-[#16302A] transition-colors">Privacy Policy</a>
+              <span className="text-[#E8CBA0]">|</span>
+              <a href="/terms-of-service" className="hover:text-[#16302A] transition-colors">Terms of Service</a>
+            </div>
             <span className="hidden md:inline text-[#4C594E]">24/7 Field Techs Standing By:</span>
             <a 
               href="tel:+14075579924" 
@@ -108,6 +113,11 @@ export default function HomePage() {
               <a href="/about" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#E8A33D] py-1">About</a>
               <a href="/contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#E8A33D] py-1">Contact</a>
             </nav>
+            <div className="pt-2 border-t border-[#DBDFD1]/60 flex items-center gap-3 text-xs font-['IBM_Plex_Mono',monospace] text-[#4C594E]">
+              <a href="/privacy-policy" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#16302A]">Privacy Policy</a>
+              <span className="text-[#DBDFD1]">|</span>
+              <a href="/terms-of-service" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#16302A]">Terms of Service</a>
+            </div>
             <div className="pt-3 border-t border-[#DBDFD1] flex flex-col gap-3">
               <a 
                 href="tel:+14075579924" 
