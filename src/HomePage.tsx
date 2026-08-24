@@ -989,7 +989,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 14. Case Studies (3 Cards with CLEARLY BRACKETED PLACEHOLDERS) */}
+        {/* TODO: replace with real case studies once documented project data is provided */}
+        {/* 
         <section className="py-20 lg:py-24 border-b border-[#DBDFD1]">
           <div className="max-w-[1180px] mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-14">
@@ -1005,7 +1006,6 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Case 1 */}
               <div className="bg-[#F5F6EF] rounded-lg border border-[#DBDFD1] overflow-hidden flex flex-col justify-between">
                 <div className="h-48 bg-[#16302A] flex items-center justify-center p-4 text-center">
                   <span className="font-['IBM_Plex_Mono',monospace] text-xs text-[#E8A33D] font-bold">
@@ -1037,7 +1037,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Case 2 */}
               <div className="bg-[#F5F6EF] rounded-lg border border-[#DBDFD1] overflow-hidden flex flex-col justify-between">
                 <div className="h-48 bg-[#16302A] flex items-center justify-center p-4 text-center">
                   <span className="font-['IBM_Plex_Mono',monospace] text-xs text-[#E8A33D] font-bold">
@@ -1069,7 +1068,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Case 3 */}
               <div className="bg-[#F5F6EF] rounded-lg border border-[#DBDFD1] overflow-hidden flex flex-col justify-between">
                 <div className="h-48 bg-[#16302A] flex items-center justify-center p-4 text-center">
                   <span className="font-['IBM_Plex_Mono',monospace] text-xs text-[#E8A33D] font-bold">
@@ -1103,8 +1101,10 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        */}
 
-        {/* 15. Testimonials (3 Cards with CLEARLY BRACKETED PLACEHOLDERS) */}
+        {/* TODO: replace with real testimonial once client reviews are collected */}
+        {/*
         <section className="py-20 lg:py-24 bg-[#EAEBE0] border-b border-[#DBDFD1]">
           <div className="max-w-[1180px] mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-14">
@@ -1120,7 +1120,6 @@ export default function HomePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Testimonial 1 */}
               <div className="bg-[#F5F6EF] p-6 rounded-lg border border-[#DBDFD1] flex flex-col justify-between">
                 <div className="mb-4">
                   <div className="flex text-[#E8A33D] text-lg mb-3">&starf;&starf;&starf;&starf;&starf;</div>
@@ -1134,7 +1133,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Testimonial 2 */}
               <div className="bg-[#F5F6EF] p-6 rounded-lg border border-[#DBDFD1] flex flex-col justify-between">
                 <div className="mb-4">
                   <div className="flex text-[#E8A33D] text-lg mb-3">&starf;&starf;&starf;&starf;&starf;</div>
@@ -1148,7 +1146,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Testimonial 3 */}
               <div className="bg-[#F5F6EF] p-6 rounded-lg border border-[#DBDFD1] flex flex-col justify-between">
                 <div className="mb-4">
                   <div className="flex text-[#E8A33D] text-lg mb-3">&starf;&starf;&starf;&starf;&starf;</div>
@@ -1164,6 +1161,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        */}
 
         {/* 16. Service Areas (6 Neighborhood Cards) */}
         <section id="service-areas" className="py-20 lg:py-24 border-b border-[#DBDFD1]">
@@ -1605,7 +1603,8 @@ export default function HomePage() {
 
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-['IBM_Plex_Mono',monospace] text-[#F5F6EF]/60">
             <p>&copy; 2026 Orlando Rapid Restoration. All rights reserved.</p>
-            <p>FL Mold Remediation / State Certified Contractor Lic. # [Pending/Placeholder]</p>
+            {/* TODO: add real license number once provided (e.g. FL Mold Remediation / State Certified Contractor Lic. #...) */}
+            <p>FL Mold Remediation / State Certified Contractor &bull; Licensed &amp; Insured</p>
           </div>
         </div>
       </footer>
