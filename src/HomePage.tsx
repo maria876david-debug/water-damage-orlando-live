@@ -1588,9 +1588,11 @@ export default function HomePage() {
             {/* Col 3: Company Links & Legal */}
             <div className="lg:col-span-3 space-y-3">
               <span className="font-['Big_Shoulders_Display',sans-serif] text-xl font-bold uppercase text-[#E8A33D] block">
-                Company &amp; Legal
+                Guides &amp; Company
               </span>
               <ul className="space-y-2 text-xs text-[#F5F6EF]/80">
+                <li><a href="/mold-and-health-guide" className="hover:text-[#E8A33D] transition-colors">Mold &amp; Health Risks Guide</a></li>
+                <li><a href="/insurance-guide" className="hover:text-[#E8A33D] transition-colors">FL Water Damage Insurance Guide</a></li>
                 <li><a href="/about" className="hover:text-[#E8A33D] transition-colors">About Our Team</a></li>
                 <li><a href="/locations" className="hover:text-[#E8A33D] transition-colors">Orange County Service Areas</a></li>
                 <li><a href="/blog" className="hover:text-[#E8A33D] transition-colors">Restoration Guides &amp; Insights</a></li>

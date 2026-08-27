@@ -11,6 +11,7 @@
     { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true },
     { "source": "/terms-of-service.html", "destination": "/terms-of-service", "permanent": true },
     { "source": "/insurance-guide.html", "destination": "/insurance-guide", "permanent": true },
+    { "source": "/mold-and-health-guide.html", "destination": "/mold-and-health-guide", "permanent": true },
     { "source": "/blog.html", "destination": "/blog", "permanent": true },
 
     { "source": "/services/:slug.html", "destination": "/services/:slug", "permanent": true },

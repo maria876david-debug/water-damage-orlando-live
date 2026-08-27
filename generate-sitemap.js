@@ -61,7 +61,7 @@ function getRouteInfo(filePath) {
   if (pathName === '/' || pathName === '') {
     priority = '1.0';
     changefreq = 'daily';
-  } else if (pathName === '/insurance-guide') {
+  } else if (pathName === '/insurance-guide' || pathName === '/mold-and-health-guide') {
     priority = '0.9';
     changefreq = 'weekly';
   } else if (['/about', '/services', '/locations', '/blog', '/contact'].includes(pathName)) {
