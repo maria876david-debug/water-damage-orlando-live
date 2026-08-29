@@ -152,6 +152,10 @@
 
     { "source": "/why-is-my-water-damage-restoration-taking-so-long-in-orlando.html", "destination": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando", "permanent": true },
     { "source": "/why-is-my-water-damage-restoration-taking-so-long-in-orlando", "destination": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando", "permanent": true },
-    { "source": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando.html", "destination": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando", "permanent": true }
+    { "source": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando.html", "destination": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando", "permanent": true },
+
+    { "source": "/water-damage-categories-explained.html", "destination": "/blog/water-damage-categories-explained", "permanent": true },
+    { "source": "/water-damage-categories-explained", "destination": "/blog/water-damage-categories-explained", "permanent": true },
+    { "source": "/blog/water-damage-categories-explained.html", "destination": "/blog/water-damage-categories-explained", "permanent": true }
   ]
 }
