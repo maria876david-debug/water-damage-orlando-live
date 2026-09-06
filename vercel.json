@@ -156,6 +156,10 @@
 
     { "source": "/water-damage-categories-explained.html", "destination": "/blog/water-damage-categories-explained", "permanent": true },
     { "source": "/water-damage-categories-explained", "destination": "/blog/water-damage-categories-explained", "permanent": true },
-    { "source": "/blog/water-damage-categories-explained.html", "destination": "/blog/water-damage-categories-explained", "permanent": true }
+    { "source": "/blog/water-damage-categories-explained.html", "destination": "/blog/water-damage-categories-explained", "permanent": true },
+
+    { "source": "/water-mitigation-vs-restoration.html", "destination": "/blog/water-mitigation-vs-restoration", "permanent": true },
+    { "source": "/water-mitigation-vs-restoration", "destination": "/blog/water-mitigation-vs-restoration", "permanent": true },
+    { "source": "/blog/water-mitigation-vs-restoration.html", "destination": "/blog/water-mitigation-vs-restoration", "permanent": true }
   ]
 }
