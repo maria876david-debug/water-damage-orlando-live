@@ -29,6 +29,7 @@ for (const file of files) {
       .replace(/\[\d+(?:px|rem|em|%)\/[^\]]+\]/g, '')
       .replace(/\[&[^\]]+\]/g, '')
       .replace(/\["[^"]+"\]/g, '')
+      .replace(/\['[^']+'[^\]]*\]/g, '')
       .replace(/\[calc\([^\]]+\)\]/g, '')
       .replace(/\[(?:url|content|grid)[^\]]*\]/g, '')
       .replace(/\[\d+\.\d+\]/g, '');

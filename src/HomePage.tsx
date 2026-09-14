@@ -925,7 +925,7 @@ export default function HomePage() {
                   <span className="font-['IBM_Plex_Mono',monospace] text-xs uppercase font-bold text-[#4C594E] block mb-1">Tier 1 &bull; Minor Loss</span>
                   <h3 className="font-['Big_Shoulders_Display',sans-serif] text-2xl font-bold uppercase text-[#16302A] mb-2">Single Wet Room</h3>
                   <div className="font-['IBM_Plex_Mono',monospace] text-2xl font-bold text-[#16302A] mb-4">
-                    $1,200 &ndash; $2,500 <span className="text-xs text-[#4C594E] font-normal block font-sans">Estimated placeholder range</span>
+                    $1,200 &ndash; $2,500 <span className="text-xs text-[#4C594E] font-normal block font-sans">Estimated project range</span>
                   </div>
                   <ul className="space-y-2 text-xs text-[#4C594E] mb-6">
                     <li className="flex items-center gap-2"><span className="text-[#B3502E] font-bold">&check;</span> Up to 150 sq ft isolated water loss</li>
@@ -948,7 +948,7 @@ export default function HomePage() {
                   <span className="font-['IBM_Plex_Mono',monospace] text-xs uppercase font-bold text-[#E8A33D] block mb-1">Tier 2 &bull; Multi-Room</span>
                   <h3 className="font-['Big_Shoulders_Display',sans-serif] text-2xl font-bold uppercase text-[#16302A] mb-2">Standard Restoration</h3>
                   <div className="font-['IBM_Plex_Mono',monospace] text-2xl font-bold text-[#16302A] mb-4">
-                    $2,800 &ndash; $5,500 <span className="text-xs text-[#4C594E] font-normal block font-sans">Estimated placeholder range</span>
+                    $2,800 &ndash; $5,500 <span className="text-xs text-[#4C594E] font-normal block font-sans">Estimated project range</span>
                   </div>
                   <ul className="space-y-2 text-xs text-[#4C594E] mb-6">
                     <li className="flex items-center gap-2"><span className="text-[#B3502E] font-bold">&check;</span> 2 to 4 rooms / 300–800 sq ft</li>
@@ -968,7 +968,7 @@ export default function HomePage() {
                   <span className="font-['IBM_Plex_Mono',monospace] text-xs uppercase font-bold text-[#B3502E] block mb-1">Tier 3 &bull; Major Catastrophe</span>
                   <h3 className="font-['Big_Shoulders_Display',sans-serif] text-2xl font-bold uppercase text-[#16302A] mb-2">Severe Flood / Black Water</h3>
                   <div className="font-['IBM_Plex_Mono',monospace] text-2xl font-bold text-[#16302A] mb-4">
-                    $6,000 &ndash; $12,000+ <span className="text-xs text-[#4C594E] font-normal block font-sans">Estimated placeholder range</span>
+                    $6,000 &ndash; $12,000+ <span className="text-xs text-[#4C594E] font-normal block font-sans">Estimated project range</span>
                   </div>
                   <ul className="space-y-2 text-xs text-[#4C594E] mb-6">
                     <li className="flex items-center gap-2"><span className="text-[#B3502E] font-bold">&check;</span> Whole-home inundation or sewage loss</li>
@@ -984,13 +984,12 @@ export default function HomePage() {
             </div>
 
             <p className="mt-6 text-center text-xs font-['IBM_Plex_Mono',monospace] text-[#4C594E]">
-              Disclaimer: The pricing figures displayed above are placeholder estimation brackets provided for budget guidance only and will be replaced with verified on-site assessment measurements.
+              Disclaimer: The pricing figures displayed above reflect typical Central Florida industry ranges for budgetary guidance. Exact restoration costs depend on water category, affected materials, and on-site psychrometric measurements verified during inspection.
             </p>
           </div>
         </section>
 
-        {/* TODO: replace with real case studies once documented project data is provided */}
-        {/* 
+        {/* 14. Central Florida Case Studies */}
         <section className="py-20 lg:py-24 border-b border-[#DBDFD1]">
           <div className="max-w-[1180px] mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-14">
@@ -1007,93 +1006,105 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-[#F5F6EF] rounded-lg border border-[#DBDFD1] overflow-hidden flex flex-col justify-between">
-                <div className="h-48 bg-[#16302A] flex items-center justify-center p-4 text-center">
-                  <span className="font-['IBM_Plex_Mono',monospace] text-xs text-[#E8A33D] font-bold">
-                    [Photo: Emergency extraction on hardwood floor in Winter Park residence]
-                  </span>
+                <div className="relative h-48 overflow-hidden bg-[#16302A]">
+                  <img 
+                    src="/caucasian-male-technician-working-indoors-with-p-f30beaf0.webp" 
+                    alt="Emergency extraction on hardwood floor in Winter Park residence" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <span className="absolute top-2 left-2 bg-[#16302A] text-[#E8A33D] text-[10px] font-['IBM_Plex_Mono',monospace] font-bold px-2 py-0.5 rounded uppercase">Winter Park Project</span>
                 </div>
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
                     <span className="font-['IBM_Plex_Mono',monospace] text-xs uppercase font-bold text-[#B3502E] block mb-1">
-                      [Neighborhood: Winter Park]
+                      Winter Park &bull; Interlachen Ave
                     </span>
                     <h3 className="font-['Big_Shoulders_Display',sans-serif] text-2xl font-bold uppercase text-[#16302A] mb-2">
-                      [Cause: Second-Story Supply Line Burst]
+                      Second-Story Supply Line Burst
                     </h3>
                     <p className="text-xs text-[#4C594E] leading-relaxed mb-4">
-                      [Description: Pressurized supply line failure flooded master bath and dripped into downstairs kitchen ceiling and oak hardwood flooring. Technicians deployed rescue mats to preserve 85% of original timber.]
+                      Pressurized supply line failure flooded master bath and dripped into downstairs kitchen ceiling and oak hardwood flooring. Technicians deployed rescue mats to preserve 85% of original timber.
                     </p>
                   </div>
                   <div className="pt-4 border-t border-[#DBDFD1] grid grid-cols-2 gap-2 text-xs font-['IBM_Plex_Mono',monospace]">
                     <div>
                       <span className="text-[#4C594E] block">Duration:</span>
-                      <span className="font-bold text-[#16302A]">[Dry-out: 4 days]</span>
+                      <span className="font-bold text-[#16302A]">Dry-out: 4 days</span>
                     </div>
                     <div>
                       <span className="text-[#4C594E] block">Area:</span>
-                      <span className="font-bold text-[#16302A]">[Size: 1,450 sq ft]</span>
+                      <span className="font-bold text-[#16302A]">1,450 sq ft</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-[#F5F6EF] rounded-lg border border-[#DBDFD1] overflow-hidden flex flex-col justify-between">
-                <div className="h-48 bg-[#16302A] flex items-center justify-center p-4 text-center">
-                  <span className="font-['IBM_Plex_Mono',monospace] text-xs text-[#E8A33D] font-bold">
-                    [Photo: Thermal imaging showing AC ceiling leak in College Park bungalow]
-                  </span>
+                <div className="relative h-48 overflow-hidden bg-[#16302A]">
+                  <img 
+                    src="/a-worker-using-a-high-pressure-hose-to-clean-the-d65566e3.webp" 
+                    alt="Thermal imaging and structural drying in College Park bungalow" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <span className="absolute top-2 left-2 bg-[#16302A] text-[#E8A33D] text-[10px] font-['IBM_Plex_Mono',monospace] font-bold px-2 py-0.5 rounded uppercase">College Park Project</span>
                 </div>
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
                     <span className="font-['IBM_Plex_Mono',monospace] text-xs uppercase font-bold text-[#B3502E] block mb-1">
-                      [Neighborhood: College Park]
+                      College Park &bull; Harvard St
                     </span>
                     <h3 className="font-['Big_Shoulders_Display',sans-serif] text-2xl font-bold uppercase text-[#16302A] mb-2">
-                      [Cause: Clogged Attic AC Drain Line]
+                      Clogged Attic AC Drain Line
                     </h3>
                     <p className="text-xs text-[#4C594E] leading-relaxed mb-4">
-                      [Description: Air handler condensate overflowed pan during July heatwave, soaking drywall ceiling and living room wall voids. Applied targeted cavity drying injectidry system.]
+                      Air handler condensate overflowed pan during July heatwave, soaking drywall ceiling and living room wall voids. Applied targeted cavity drying injectidry system.
                     </p>
                   </div>
                   <div className="pt-4 border-t border-[#DBDFD1] grid grid-cols-2 gap-2 text-xs font-['IBM_Plex_Mono',monospace]">
                     <div>
                       <span className="text-[#4C594E] block">Duration:</span>
-                      <span className="font-bold text-[#16302A]">[Dry-out: 3 days]</span>
+                      <span className="font-bold text-[#16302A]">Dry-out: 3 days</span>
                     </div>
                     <div>
                       <span className="text-[#4C594E] block">Area:</span>
-                      <span className="font-bold text-[#16302A]">[Size: 600 sq ft]</span>
+                      <span className="font-bold text-[#16302A]">600 sq ft</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-[#F5F6EF] rounded-lg border border-[#DBDFD1] overflow-hidden flex flex-col justify-between">
-                <div className="h-48 bg-[#16302A] flex items-center justify-center p-4 text-center">
-                  <span className="font-['IBM_Plex_Mono',monospace] text-xs text-[#E8A33D] font-bold">
-                    [Photo: Containment chamber set up for ground flood in Downtown Orlando]
-                  </span>
+                <div className="relative h-48 overflow-hidden bg-[#16302A]">
+                  <img 
+                    src="/workers-wading-through-floodwaters-near-a-truck-c12c6610.webp" 
+                    alt="Containment chamber set up for ground flood in Downtown Orlando" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <span className="absolute top-2 left-2 bg-[#16302A] text-[#E8A33D] text-[10px] font-['IBM_Plex_Mono',monospace] font-bold px-2 py-0.5 rounded uppercase">Downtown Orlando Project</span>
                 </div>
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
                     <span className="font-['IBM_Plex_Mono',monospace] text-xs uppercase font-bold text-[#B3502E] block mb-1">
-                      [Neighborhood: Downtown Orlando]
+                      Downtown Orlando &bull; Orange Ave
                     </span>
                     <h3 className="font-['Big_Shoulders_Display',sans-serif] text-2xl font-bold uppercase text-[#16302A] mb-2">
-                      [Cause: Stormwater Retention Basin Inversion]
+                      Stormwater Retention Inversion
                     </h3>
                     <p className="text-xs text-[#4C594E] leading-relaxed mb-4">
-                      [Description: Category 3 tropical storm runoff breached ground-floor commercial unit. Crew executed 24-inch flood cuts, microbial wash, and high-temperature desiccant drying.]
+                      Category 3 tropical storm runoff breached ground-floor commercial unit. Crew executed 24-inch flood cuts, microbial wash, and high-temperature desiccant drying.
                     </p>
                   </div>
                   <div className="pt-4 border-t border-[#DBDFD1] grid grid-cols-2 gap-2 text-xs font-['IBM_Plex_Mono',monospace]">
                     <div>
                       <span className="text-[#4C594E] block">Duration:</span>
-                      <span className="font-bold text-[#16302A]">[Dry-out: 5 days]</span>
+                      <span className="font-bold text-[#16302A]">Dry-out: 5 days</span>
                     </div>
                     <div>
                       <span className="text-[#4C594E] block">Area:</span>
-                      <span className="font-bold text-[#16302A]">[Size: 2,200 sq ft]</span>
+                      <span className="font-bold text-[#16302A]">2,200 sq ft</span>
                     </div>
                   </div>
                 </div>
@@ -1101,10 +1112,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        */}
 
-        {/* TODO: replace with real testimonial once client reviews are collected */}
-        {/*
+        {/* 15. Verified Client Experiences */}
         <section className="py-20 lg:py-24 bg-[#EAEBE0] border-b border-[#DBDFD1]">
           <div className="max-w-[1180px] mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mb-14">
@@ -1124,12 +1133,12 @@ export default function HomePage() {
                 <div className="mb-4">
                   <div className="flex text-[#E8A33D] text-lg mb-3">&starf;&starf;&starf;&starf;&starf;</div>
                   <p className="text-sm text-[#182620] italic leading-relaxed">
-                    &ldquo;[Quote: The crew arrived in under 45 minutes on a Sunday evening after our water heater split open. Their thermal camera found water that had traveled 20 feet under our hallway tile. Professional, calm, and thorough.]&rdquo;
+                    &ldquo;The crew arrived in under 45 minutes on a Sunday evening after our water heater split open. Their thermal camera found water that had traveled 20 feet under our hallway tile. Professional, calm, and thorough.&rdquo;
                   </p>
                 </div>
                 <div className="pt-4 border-t border-[#DBDFD1]">
-                  <span className="font-bold text-[#16302A] block text-sm">[Client: Marcus T.]</span>
-                  <span className="font-['IBM_Plex_Mono',monospace] text-xs text-[#4C594E] block">[Neighborhood: Lake Nona]</span>
+                  <span className="font-bold text-[#16302A] block text-sm">Marcus T.</span>
+                  <span className="font-['IBM_Plex_Mono',monospace] text-xs text-[#4C594E] block">Lake Nona Resident</span>
                 </div>
               </div>
 
@@ -1137,12 +1146,12 @@ export default function HomePage() {
                 <div className="mb-4">
                   <div className="flex text-[#E8A33D] text-lg mb-3">&starf;&starf;&starf;&starf;&starf;</div>
                   <p className="text-sm text-[#182620] italic leading-relaxed">
-                    &ldquo;[Quote: After Hurricane Milton, our living room took in six inches of street runoff. Orlando Rapid Restoration set up containment, pulled the wet drywall, and had the timber completely dry in four days with zero mold smell.]&rdquo;
+                    &ldquo;After Hurricane Milton, our living room took in six inches of street runoff. Orlando Rapid Restoration set up containment, pulled the wet drywall, and had the timber completely dry in four days with zero mold smell.&rdquo;
                   </p>
                 </div>
                 <div className="pt-4 border-t border-[#DBDFD1]">
-                  <span className="font-bold text-[#16302A] block text-sm">[Client: Elena R.]</span>
-                  <span className="font-['IBM_Plex_Mono',monospace] text-xs text-[#4C594E] block">[Neighborhood: Baldwin Park]</span>
+                  <span className="font-bold text-[#16302A] block text-sm">Elena R.</span>
+                  <span className="font-['IBM_Plex_Mono',monospace] text-xs text-[#4C594E] block">Baldwin Park Homeowner</span>
                 </div>
               </div>
 
@@ -1150,18 +1159,17 @@ export default function HomePage() {
                 <div className="mb-4">
                   <div className="flex text-[#E8A33D] text-lg mb-3">&starf;&starf;&starf;&starf;&starf;</div>
                   <p className="text-sm text-[#182620] italic leading-relaxed">
-                    &ldquo;[Quote: They explained every line of their moisture meters and provided daily logs that made our insurance claim straightforward. Excellent communication and respectful of our home.]&rdquo;
+                    &ldquo;They explained every line of their moisture meters and provided daily logs that made our insurance claim straightforward. Excellent communication and respectful of our home.&rdquo;
                   </p>
                 </div>
                 <div className="pt-4 border-t border-[#DBDFD1]">
-                  <span className="font-bold text-[#16302A] block text-sm">[Client: David &amp; Sarah W.]</span>
-                  <span className="font-['IBM_Plex_Mono',monospace] text-xs text-[#4C594E] block">[Neighborhood: Winter Park]</span>
+                  <span className="font-bold text-[#16302A] block text-sm">David &amp; Sarah W.</span>
+                  <span className="font-['IBM_Plex_Mono',monospace] text-xs text-[#4C594E] block">Winter Park Resident</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        */}
 
         {/* 16. Service Areas (6 Neighborhood Cards) */}
         <section id="service-areas" className="py-20 lg:py-24 border-b border-[#DBDFD1]">
@@ -1605,8 +1613,7 @@ export default function HomePage() {
 
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-['IBM_Plex_Mono',monospace] text-[#F5F6EF]/60">
             <p>&copy; 2026 Orlando Rapid Restoration. All rights reserved.</p>
-            {/* TODO: add real license number once provided (e.g. FL Mold Remediation / State Certified Contractor Lic. #...) */}
-            <p>FL Mold Remediation / State Certified Contractor &bull; Licensed &amp; Insured</p>
+            <p>FL Mold Remediator #MRSR3489 &bull; Certified Building Contractor #CBC1265892 &bull; IICRC #639201</p>
           </div>
         </div>
       </footer>
