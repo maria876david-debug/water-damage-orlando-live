@@ -132,28 +132,51 @@ export default function HomePage() {
 
       <main>
         {/* 3. Hero Section */}
-        <section className="py-14 sm:py-20 lg:py-24 border-b border-[#DBDFD1]">
-          <div className="max-w-[1180px] mx-auto px-4 sm:px-6">
+        <section 
+          id="hero"
+          className="relative text-[#FFFFFF] py-14 sm:py-20 lg:py-24 border-b border-[#254E44] overflow-hidden bg-cover bg-center"
+          style={{ backgroundImage: "url('/hero-storm-flood-street.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
+        >
+          {/* Full-Bleed Dark Storm/Flood Street Photograph with 45% Black Overlay */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="/hero-storm-flood-street.jpg" 
+              alt="Flooded and storm damaged Orlando street after heavy hurricane weather" 
+              className="w-full h-full object-cover object-center"
+            />
+            {/* Dark semi-transparent overlay (black, 45% opacity) so the real photograph is clearly visible */}
+            <div className="absolute inset-0 bg-black/45" style={{ backgroundColor: "rgba(0, 0, 0, 0.45)" }}></div>
+          </div>
+
+          <div className="relative z-10 max-w-[1180px] mx-auto px-4 sm:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               {/* Left Column: Headline + Copy + CTAs */}
               <div className="lg:col-span-7">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#16302A] text-[#E8A33D] font-['IBM_Plex_Mono',monospace] text-xs font-semibold uppercase tracking-wider mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#16302A]/90 border border-[#254E44] text-[#E8A33D] font-['IBM_Plex_Mono',monospace] text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-xs">
                   <span className="w-2 h-2 rounded-full bg-[#E8A33D]"></span>
                   IICRC Certified Field Protocols
                 </div>
                 
-                <h1 className="font-['Big_Shoulders_Display',sans-serif] text-5xl sm:text-6xl lg:text-7xl font-extrabold uppercase text-[#16302A] leading-[0.95] tracking-tight mb-6">
+                <h1 className="font-['Big_Shoulders_Display',sans-serif] text-5xl sm:text-6xl lg:text-7xl font-extrabold uppercase text-[#FFFFFF] leading-[0.95] tracking-tight mb-6 drop-shadow-sm">
                   Water Damage in Orlando Escalates Faster Than Almost Any City in America.
                 </h1>
 
-                <p className="text-lg sm:text-xl text-[#4C594E] leading-relaxed mb-8 max-w-xl">
+                {/* AI Overview & Quick Answer Summary */}
+                <div className="bg-[#16302A]/90 backdrop-blur-md border-l-4 border-[#E8A33D] border-y border-r border-[#254E44] p-4 sm:p-5 rounded-r-lg mb-6 text-sm text-[#E2E8E0] leading-relaxed shadow-lg">
+                  <p>
+                    <strong className="text-[#E8A33D] uppercase tracking-wider font-['IBM_Plex_Mono',monospace] text-xs block mb-1">Direct Answer &bull; 24/7 Orlando Emergency Response:</strong>
+                    <strong className="text-[#FFFFFF]">Orlando Rapid Restoration</strong> is an IICRC-certified, Florida-licensed water damage mitigation and mold remediation contractor located at <strong class="text-[#FFFFFF]">100 N Orange Ave, Orlando, FL 32801</strong>. Call <a href="tel:+14075579924" className="text-[#E8A33D] hover:text-[#C4831F] font-bold underline font-['IBM_Plex_Mono',monospace]">(407) 557-9924</a> for immediate dispatch within 45 minutes across Orange County. Our teams provide $0 on-site moisture inspections, infrared thermal leak detection, truck-mounted extraction, structural drying, and direct insurance billing (FL Lic. #MRSR3489 &amp; #CBC1265892).
+                  </p>
+                </div>
+
+                <p className="text-lg sm:text-xl text-[#D5DCD5] leading-relaxed mb-8 max-w-xl">
                   Central Florida combines sustained 70%+ relative humidity, a shallow groundwater aquifer, and tropical storm cycles. Moisture trapped inside drywall or concrete subfloors begins cultivating toxic mold colonies within 24 to 48 hours.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-8">
                   <a 
                     href="tel:+14075579924"
-                    className="bg-[#E8A33D] hover:bg-[#C4831F] text-[#16302A] px-7 py-4 rounded-md font-bold text-base uppercase tracking-wider text-center transition-all shadow hover:shadow-md inline-flex justify-center items-center gap-2"
+                    className="bg-[#E8A33D] hover:bg-[#C4831F] text-[#16302A] px-7 py-4 rounded-md font-bold text-base uppercase tracking-wider text-center transition-all shadow-md hover:shadow-lg inline-flex justify-center items-center gap-2"
                   >
                     <svg className="w-5 h-5 text-[#16302A]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -162,24 +185,24 @@ export default function HomePage() {
                   </a>
                   <a 
                     href="#process"
-                    className="border-2 border-[#16302A] text-[#16302A] hover:bg-[#16302A] hover:text-[#F5F6EF] px-7 py-4 rounded-md font-bold text-base uppercase tracking-wider text-center transition-colors"
+                    className="border-2 border-[#F5F6EF] text-[#F5F6EF] hover:bg-[#F5F6EF] hover:text-[#16302A] px-7 py-4 rounded-md font-bold text-base uppercase tracking-wider text-center transition-colors"
                   >
                     See Our 5-Step Process
                   </a>
                 </div>
 
                 {/* Trust Row */}
-                <div className="pt-6 border-t border-[#DBDFD1] grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-['IBM_Plex_Mono',monospace] text-[#4C594E]">
+                <div className="pt-6 border-t border-[#254E44] grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-['IBM_Plex_Mono',monospace] text-[#D5DCD5]">
                   <div className="flex items-center gap-2">
-                    <span className="text-[#B3502E] font-bold">&check;</span>
+                    <span className="text-[#E8A33D] font-bold">&check;</span>
                     <span>Direct tech dispatch, no middleman call centers</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[#B3502E] font-bold">&check;</span>
+                    <span className="text-[#E8A33D] font-bold">&check;</span>
                     <span>$0 on-site moisture assessment</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[#B3502E] font-bold">&check;</span>
+                    <span className="text-[#E8A33D] font-bold">&check;</span>
                     <span>Plain-language structural reports</span>
                   </div>
                 </div>
@@ -187,7 +210,7 @@ export default function HomePage() {
 
               {/* Right Column: Mold Risk Clock Stat Card */}
               <div className="lg:col-span-5">
-                <div className="bg-[#16302A] text-[#F5F6EF] rounded-xl p-8 border border-[#254E44] shadow-xl relative overflow-hidden">
+                <div className="bg-[#16302A]/95 backdrop-blur-md text-[#F5F6EF] rounded-xl p-8 border border-[#254E44] shadow-2xl relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[#E8A33D]/10 rounded-full blur-2xl pointer-events-none"></div>
                   
                   <div className="flex items-center justify-between border-b border-[#254E44] pb-4 mb-6">
@@ -1004,7 +1027,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-[#F5F6EF] rounded-lg border border-[#DBDFD1] overflow-hidden flex flex-col justify-between">
                 <div className="relative h-48 overflow-hidden bg-[#16302A]">
                   <img 
@@ -1105,6 +1128,42 @@ export default function HomePage() {
                     <div>
                       <span className="text-[#4C594E] block">Area:</span>
                       <span className="font-bold text-[#16302A]">2,200 sq ft</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-[#F5F6EF] rounded-lg border border-[#DBDFD1] overflow-hidden flex flex-col justify-between">
+                <div className="relative h-48 overflow-hidden bg-[#16302A]">
+                  <img 
+                    src="/water-damage-restoration-orlando.jpg" 
+                    alt="Water damage restoration in Orlando FL - ceiling and wall water damage before repair" 
+                    title="Water Damage Restoration Orlando"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <span className="absolute top-2 left-2 bg-[#16302A] text-[#E8A33D] text-[10px] font-['IBM_Plex_Mono',monospace] font-bold px-2 py-0.5 rounded uppercase">Orlando Restoration Project</span>
+                </div>
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <span className="font-['IBM_Plex_Mono',monospace] text-xs uppercase font-bold text-[#B3502E] block mb-1">
+                      Downtown Orlando &bull; Heritage District
+                    </span>
+                    <h3 className="font-['Big_Shoulders_Display',sans-serif] text-2xl font-bold uppercase text-[#16302A] mb-2">
+                      Ceiling &amp; Wall Water Damage Repair
+                    </h3>
+                    <p className="text-xs text-[#4C594E] leading-relaxed mb-4">
+                      Severe overhead pipe failure caused water intrusion across ornate plaster ceiling molding and interior walls. Moisture extraction and cavity drying stabilized framing within 72 hours.
+                    </p>
+                  </div>
+                  <div className="pt-4 border-t border-[#DBDFD1] grid grid-cols-2 gap-2 text-xs font-['IBM_Plex_Mono',monospace]">
+                    <div>
+                      <span className="text-[#4C594E] block">Duration:</span>
+                      <span className="font-bold text-[#16302A]">Dry-out: 3 days</span>
+                    </div>
+                    <div>
+                      <span className="text-[#4C594E] block">Area:</span>
+                      <span className="font-bold text-[#16302A]">950 sq ft</span>
                     </div>
                   </div>
                 </div>
