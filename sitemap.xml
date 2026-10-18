@@ -8,6 +8,7 @@
         <loc>https://www.waterdamagerestorationorlando.us/post-sitemap.xml</loc>
         <lastmod>2026-10-17</lastmod>
         <!-- https://www.waterdamagerestorationorlando.us/blog/ac-drain-line-clogs-orlando-water-damage 2026-10-17 -->
+        <!-- https://www.waterdamagerestorationorlando.us/blog/roof-leak-vs-plumbing-leak-orlando 2026-10-18 -->
     </sitemap>
     <sitemap>
         <loc>https://www.waterdamagerestorationorlando.us/service-sitemap.xml</loc>
@@ -20,6 +21,12 @@
   <url>
     <loc>https://www.waterdamagerestorationorlando.us/blog/ac-drain-line-clogs-orlando-water-damage</loc>
     <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.waterdamagerestorationorlando.us/blog/roof-leak-vs-plumbing-leak-orlando</loc>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
