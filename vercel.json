@@ -2,164 +2,625 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/index", "destination": "/", "permanent": true },
-    { "source": "/about.html", "destination": "/about", "permanent": true },
-    { "source": "/contact.html", "destination": "/contact", "permanent": true },
-    { "source": "/services.html", "destination": "/services", "permanent": true },
-    { "source": "/locations.html", "destination": "/locations", "permanent": true },
-    { "source": "/privacy-policy.html", "destination": "/privacy-policy", "permanent": true },
-    { "source": "/terms-of-service.html", "destination": "/terms-of-service", "permanent": true },
-    { "source": "/insurance-guide.html", "destination": "/insurance-guide", "permanent": true },
-    { "source": "/mold-and-health-guide.html", "destination": "/mold-and-health-guide", "permanent": true },
-    { "source": "/blog.html", "destination": "/blog", "permanent": true },
-
-    { "source": "/services/:slug.html", "destination": "/services/:slug", "permanent": true },
-    { "source": "/locations/:slug.html", "destination": "/locations/:slug", "permanent": true },
-    { "source": "/blog/:slug.html", "destination": "/blog/:slug", "permanent": true },
-
-    { "source": "/basement-crawl-space-flooding-cleanup.html", "destination": "/services/basement-crawl-space-flooding-cleanup", "permanent": true },
-    { "source": "/basement-crawl-space-flooding-cleanup", "destination": "/services/basement-crawl-space-flooding-cleanup", "permanent": true },
-    { "source": "/services/basement-crawl-space-flooding-cleanup.html", "destination": "/services/basement-crawl-space-flooding-cleanup", "permanent": true },
-
-    { "source": "/burst-pipe-water-damage-cleanup.html", "destination": "/services/burst-pipe-water-damage-cleanup", "permanent": true },
-    { "source": "/burst-pipe-water-damage-cleanup", "destination": "/services/burst-pipe-water-damage-cleanup", "permanent": true },
-    { "source": "/services/burst-pipe-water-damage-cleanup.html", "destination": "/services/burst-pipe-water-damage-cleanup", "permanent": true },
-
-    { "source": "/ceiling-leak-water-damage-repair.html", "destination": "/services/ceiling-leak-water-damage-repair", "permanent": true },
-    { "source": "/ceiling-leak-water-damage-repair", "destination": "/services/ceiling-leak-water-damage-repair", "permanent": true },
-    { "source": "/services/ceiling-leak-water-damage-repair.html", "destination": "/services/ceiling-leak-water-damage-repair", "permanent": true },
-
-    { "source": "/contents-cleaning-and-restoration.html", "destination": "/services/contents-cleaning-and-restoration", "permanent": true },
-    { "source": "/contents-cleaning-and-restoration", "destination": "/services/contents-cleaning-and-restoration", "permanent": true },
-    { "source": "/services/contents-cleaning-and-restoration.html", "destination": "/services/contents-cleaning-and-restoration", "permanent": true },
-
-    { "source": "/dehumidification-services.html", "destination": "/services/dehumidification-services", "permanent": true },
-    { "source": "/dehumidification-services", "destination": "/services/dehumidification-services", "permanent": true },
-    { "source": "/services/dehumidification-services.html", "destination": "/services/dehumidification-services", "permanent": true },
-
-    { "source": "/emergency-water-extraction.html", "destination": "/services/emergency-water-extraction", "permanent": true },
-    { "source": "/emergency-water-extraction", "destination": "/services/emergency-water-extraction", "permanent": true },
-    { "source": "/services/emergency-water-extraction.html", "destination": "/services/emergency-water-extraction", "permanent": true },
-
-    { "source": "/fire-damage-restoration.html", "destination": "/services/fire-damage-restoration", "permanent": true },
-    { "source": "/fire-damage-restoration", "destination": "/services/fire-damage-restoration", "permanent": true },
-    { "source": "/services/fire-damage-restoration.html", "destination": "/services/fire-damage-restoration", "permanent": true },
-
-    { "source": "/flood-damage-restoration.html", "destination": "/services/flood-damage-restoration", "permanent": true },
-    { "source": "/flood-damage-restoration", "destination": "/services/flood-damage-restoration", "permanent": true },
-    { "source": "/services/flood-damage-restoration.html", "destination": "/services/flood-damage-restoration", "permanent": true },
-
-    { "source": "/hurricane-storm-flood-water-cleanup.html", "destination": "/services/hurricane-storm-flood-water-cleanup", "permanent": true },
-    { "source": "/hurricane-storm-flood-water-cleanup", "destination": "/services/hurricane-storm-flood-water-cleanup", "permanent": true },
-    { "source": "/services/hurricane-storm-flood-water-cleanup.html", "destination": "/services/hurricane-storm-flood-water-cleanup", "permanent": true },
-
-    { "source": "/mold-remediation.html", "destination": "/services/mold-remediation", "permanent": true },
-    { "source": "/mold-remediation", "destination": "/services/mold-remediation", "permanent": true },
-    { "source": "/services/mold-remediation.html", "destination": "/services/mold-remediation", "permanent": true },
-
-    { "source": "/roof-leak-water-damage-restoration.html", "destination": "/services/roof-leak-water-damage-restoration", "permanent": true },
-    { "source": "/roof-leak-water-damage-restoration", "destination": "/services/roof-leak-water-damage-restoration", "permanent": true },
-    { "source": "/services/roof-leak-water-damage-restoration.html", "destination": "/services/roof-leak-water-damage-restoration", "permanent": true },
-
-    { "source": "/sewage-cleanup.html", "destination": "/services/sewage-cleanup", "permanent": true },
-    { "source": "/sewage-cleanup", "destination": "/services/sewage-cleanup", "permanent": true },
-    { "source": "/services/sewage-cleanup.html", "destination": "/services/sewage-cleanup", "permanent": true },
-
-    { "source": "/storm-damage-restoration.html", "destination": "/services/storm-damage-restoration", "permanent": true },
-    { "source": "/storm-damage-restoration", "destination": "/services/storm-damage-restoration", "permanent": true },
-    { "source": "/services/storm-damage-restoration.html", "destination": "/services/storm-damage-restoration", "permanent": true },
-
-    { "source": "/structural-drying.html", "destination": "/services/structural-drying", "permanent": true },
-    { "source": "/structural-drying", "destination": "/services/structural-drying", "permanent": true },
-    { "source": "/services/structural-drying.html", "destination": "/services/structural-drying", "permanent": true },
-
-    { "source": "/toilet-overflow-water-damage-cleanup.html", "destination": "/services/toilet-overflow-water-damage-cleanup", "permanent": true },
-    { "source": "/toilet-overflow-water-damage-cleanup", "destination": "/services/toilet-overflow-water-damage-cleanup", "permanent": true },
-    { "source": "/services/toilet-overflow-water-damage-cleanup.html", "destination": "/services/toilet-overflow-water-damage-cleanup", "permanent": true },
-
-    { "source": "/washing-machine-appliance-leak-cleanup.html", "destination": "/services/washing-machine-appliance-leak-cleanup", "permanent": true },
-    { "source": "/washing-machine-appliance-leak-cleanup", "destination": "/services/washing-machine-appliance-leak-cleanup", "permanent": true },
-    { "source": "/services/washing-machine-appliance-leak-cleanup.html", "destination": "/services/washing-machine-appliance-leak-cleanup", "permanent": true },
-
-    { "source": "/water-damage-odor-musty-smell-removal.html", "destination": "/services/water-damage-odor-musty-smell-removal", "permanent": true },
-    { "source": "/water-damage-odor-musty-smell-removal", "destination": "/services/water-damage-odor-musty-smell-removal", "permanent": true },
-    { "source": "/services/water-damage-odor-musty-smell-removal.html", "destination": "/services/water-damage-odor-musty-smell-removal", "permanent": true },
-
-    { "source": "/water-damage-restoration.html", "destination": "/services/water-damage-restoration", "permanent": true },
-    { "source": "/water-damage-restoration", "destination": "/services/water-damage-restoration", "permanent": true },
-    { "source": "/services/water-damage-restoration.html", "destination": "/services/water-damage-restoration", "permanent": true },
-
-    { "source": "/water-heater-leak-cleanup.html", "destination": "/services/water-heater-leak-cleanup", "permanent": true },
-    { "source": "/water-heater-leak-cleanup", "destination": "/services/water-heater-leak-cleanup", "permanent": true },
-    { "source": "/services/water-heater-leak-cleanup.html", "destination": "/services/water-heater-leak-cleanup", "permanent": true },
-
-    { "source": "/wet-carpet-water-extraction-drying.html", "destination": "/services/wet-carpet-water-extraction-drying", "permanent": true },
-    { "source": "/wet-carpet-water-extraction-drying", "destination": "/services/wet-carpet-water-extraction-drying", "permanent": true },
-    { "source": "/services/wet-carpet-water-extraction-drying.html", "destination": "/services/wet-carpet-water-extraction-drying", "permanent": true },
-
-    { "source": "/water-damage-restoration-in-college-park.html", "destination": "/locations/water-damage-restoration-in-college-park", "permanent": true },
-    { "source": "/water-damage-restoration-in-college-park", "destination": "/locations/water-damage-restoration-in-college-park", "permanent": true },
-    { "source": "/locations/water-damage-restoration-in-college-park.html", "destination": "/locations/water-damage-restoration-in-college-park", "permanent": true },
-
-    { "source": "/water-damage-restoration-in-downtown-orlando.html", "destination": "/locations/water-damage-restoration-in-downtown-orlando", "permanent": true },
-    { "source": "/water-damage-restoration-in-downtown-orlando", "destination": "/locations/water-damage-restoration-in-downtown-orlando", "permanent": true },
-    { "source": "/locations/water-damage-restoration-in-downtown-orlando.html", "destination": "/locations/water-damage-restoration-in-downtown-orlando", "permanent": true },
-
-    { "source": "/water-damage-restoration-in-lake-nona.html", "destination": "/locations/water-damage-restoration-in-lake-nona", "permanent": true },
-    { "source": "/water-damage-restoration-in-lake-nona", "destination": "/locations/water-damage-restoration-in-lake-nona", "permanent": true },
-    { "source": "/locations/water-damage-restoration-in-lake-nona.html", "destination": "/locations/water-damage-restoration-in-lake-nona", "permanent": true },
-
-    { "source": "/water-damage-restoration-in-mills-50-district.html", "destination": "/locations/water-damage-restoration-in-mills-50-district", "permanent": true },
-    { "source": "/water-damage-restoration-in-mills-50-district", "destination": "/locations/water-damage-restoration-in-mills-50-district", "permanent": true },
-    { "source": "/locations/water-damage-restoration-in-mills-50-district.html", "destination": "/locations/water-damage-restoration-in-mills-50-district", "permanent": true },
-
-    { "source": "/water-damage-restoration-in-winter-park.html", "destination": "/locations/water-damage-restoration-in-winter-park", "permanent": true },
-    { "source": "/water-damage-restoration-in-winter-park", "destination": "/locations/water-damage-restoration-in-winter-park", "permanent": true },
-    { "source": "/locations/water-damage-restoration-in-winter-park.html", "destination": "/locations/water-damage-restoration-in-winter-park", "permanent": true },
-
-    { "source": "/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes.html", "destination": "/blog/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes", "permanent": true },
-    { "source": "/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes", "destination": "/blog/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes", "permanent": true },
-    { "source": "/blog/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes.html", "destination": "/blog/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes", "permanent": true },
-
-    { "source": "/basement-flooding-orlando-explained.html", "destination": "/blog/basement-flooding-orlando-explained", "permanent": true },
-    { "source": "/basement-flooding-orlando-explained", "destination": "/blog/basement-flooding-orlando-explained", "permanent": true },
-    { "source": "/blog/basement-flooding-orlando-explained.html", "destination": "/blog/basement-flooding-orlando-explained", "permanent": true },
-
-    { "source": "/first-24-hours-burst-pipe-orlando.html", "destination": "/blog/first-24-hours-burst-pipe-orlando", "permanent": true },
-    { "source": "/first-24-hours-burst-pipe-orlando", "destination": "/blog/first-24-hours-burst-pipe-orlando", "permanent": true },
-    { "source": "/blog/first-24-hours-burst-pipe-orlando.html", "destination": "/blog/first-24-hours-burst-pipe-orlando", "permanent": true },
-
-    { "source": "/homeowners-insurance-water-damage-florida.html", "destination": "/blog/homeowners-insurance-water-damage-florida", "permanent": true },
-    { "source": "/homeowners-insurance-water-damage-florida", "destination": "/blog/homeowners-insurance-water-damage-florida", "permanent": true },
-    { "source": "/blog/homeowners-insurance-water-damage-florida.html", "destination": "/blog/homeowners-insurance-water-damage-florida", "permanent": true },
-
-    { "source": "/how-to-choose-the-right-flood-damage-restoration-service-in-orlando.html", "destination": "/blog/how-to-choose-the-right-flood-damage-restoration-service-in-orlando", "permanent": true },
-    { "source": "/how-to-choose-the-right-flood-damage-restoration-service-in-orlando", "destination": "/blog/how-to-choose-the-right-flood-damage-restoration-service-in-orlando", "permanent": true },
-    { "source": "/blog/how-to-choose-the-right-flood-damage-restoration-service-in-orlando.html", "destination": "/blog/how-to-choose-the-right-flood-damage-restoration-service-in-orlando", "permanent": true },
-
-    { "source": "/prevent-mold-after-hurricane-flooding.html", "destination": "/blog/prevent-mold-after-hurricane-flooding", "permanent": true },
-    { "source": "/prevent-mold-after-hurricane-flooding", "destination": "/blog/prevent-mold-after-hurricane-flooding", "permanent": true },
-    { "source": "/blog/prevent-mold-after-hurricane-flooding.html", "destination": "/blog/prevent-mold-after-hurricane-flooding", "permanent": true },
-
-    { "source": "/signs-ceiling-leak-collapse.html", "destination": "/blog/signs-ceiling-leak-collapse", "permanent": true },
-    { "source": "/signs-ceiling-leak-collapse", "destination": "/blog/signs-ceiling-leak-collapse", "permanent": true },
-    { "source": "/blog/signs-ceiling-leak-collapse.html", "destination": "/blog/signs-ceiling-leak-collapse", "permanent": true },
-
-    { "source": "/water-damage-restoration-cost-orlando.html", "destination": "/blog/water-damage-restoration-cost-orlando", "permanent": true },
-    { "source": "/water-damage-restoration-cost-orlando", "destination": "/blog/water-damage-restoration-cost-orlando", "permanent": true },
-    { "source": "/blog/water-damage-restoration-cost-orlando.html", "destination": "/blog/water-damage-restoration-cost-orlando", "permanent": true },
-
-    { "source": "/why-is-my-water-damage-restoration-taking-so-long-in-orlando.html", "destination": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando", "permanent": true },
-    { "source": "/why-is-my-water-damage-restoration-taking-so-long-in-orlando", "destination": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando", "permanent": true },
-    { "source": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando.html", "destination": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando", "permanent": true },
-
-    { "source": "/water-damage-categories-explained.html", "destination": "/blog/water-damage-categories-explained", "permanent": true },
-    { "source": "/water-damage-categories-explained", "destination": "/blog/water-damage-categories-explained", "permanent": true },
-    { "source": "/blog/water-damage-categories-explained.html", "destination": "/blog/water-damage-categories-explained", "permanent": true },
-
-    { "source": "/water-mitigation-vs-restoration.html", "destination": "/blog/water-mitigation-vs-restoration", "permanent": true },
-    { "source": "/water-mitigation-vs-restoration", "destination": "/blog/water-mitigation-vs-restoration", "permanent": true },
-    { "source": "/blog/water-mitigation-vs-restoration.html", "destination": "/blog/water-mitigation-vs-restoration", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/locations.html",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/terms-of-service.html",
+      "destination": "/terms-of-service",
+      "permanent": true
+    },
+    {
+      "source": "/insurance-guide.html",
+      "destination": "/insurance-guide",
+      "permanent": true
+    },
+    {
+      "source": "/mold-and-health-guide.html",
+      "destination": "/mold-and-health-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/services/:slug.html",
+      "destination": "/services/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/locations/:slug.html",
+      "destination": "/locations/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:slug.html",
+      "destination": "/blog/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/basement-crawl-space-flooding-cleanup.html",
+      "destination": "/services/basement-crawl-space-flooding-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/basement-crawl-space-flooding-cleanup",
+      "destination": "/services/basement-crawl-space-flooding-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/services/basement-crawl-space-flooding-cleanup.html",
+      "destination": "/services/basement-crawl-space-flooding-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/burst-pipe-water-damage-cleanup.html",
+      "destination": "/services/burst-pipe-water-damage-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/burst-pipe-water-damage-cleanup",
+      "destination": "/services/burst-pipe-water-damage-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/services/burst-pipe-water-damage-cleanup.html",
+      "destination": "/services/burst-pipe-water-damage-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/ceiling-leak-water-damage-repair.html",
+      "destination": "/services/ceiling-leak-water-damage-repair",
+      "permanent": true
+    },
+    {
+      "source": "/ceiling-leak-water-damage-repair",
+      "destination": "/services/ceiling-leak-water-damage-repair",
+      "permanent": true
+    },
+    {
+      "source": "/services/ceiling-leak-water-damage-repair.html",
+      "destination": "/services/ceiling-leak-water-damage-repair",
+      "permanent": true
+    },
+    {
+      "source": "/contents-cleaning-and-restoration.html",
+      "destination": "/services/contents-cleaning-and-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/contents-cleaning-and-restoration",
+      "destination": "/services/contents-cleaning-and-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/services/contents-cleaning-and-restoration.html",
+      "destination": "/services/contents-cleaning-and-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/dehumidification-services.html",
+      "destination": "/services/dehumidification-services",
+      "permanent": true
+    },
+    {
+      "source": "/dehumidification-services",
+      "destination": "/services/dehumidification-services",
+      "permanent": true
+    },
+    {
+      "source": "/services/dehumidification-services.html",
+      "destination": "/services/dehumidification-services",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-water-extraction.html",
+      "destination": "/services/emergency-water-extraction",
+      "permanent": true
+    },
+    {
+      "source": "/emergency-water-extraction",
+      "destination": "/services/emergency-water-extraction",
+      "permanent": true
+    },
+    {
+      "source": "/services/emergency-water-extraction.html",
+      "destination": "/services/emergency-water-extraction",
+      "permanent": true
+    },
+    {
+      "source": "/fire-damage-restoration.html",
+      "destination": "/services/fire-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/fire-damage-restoration",
+      "destination": "/services/fire-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/services/fire-damage-restoration.html",
+      "destination": "/services/fire-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/flood-damage-restoration.html",
+      "destination": "/services/flood-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/flood-damage-restoration",
+      "destination": "/services/flood-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/services/flood-damage-restoration.html",
+      "destination": "/services/flood-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/hurricane-storm-flood-water-cleanup.html",
+      "destination": "/services/hurricane-storm-flood-water-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/hurricane-storm-flood-water-cleanup",
+      "destination": "/services/hurricane-storm-flood-water-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/services/hurricane-storm-flood-water-cleanup.html",
+      "destination": "/services/hurricane-storm-flood-water-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/mold-remediation.html",
+      "destination": "/services/mold-remediation",
+      "permanent": true
+    },
+    {
+      "source": "/mold-remediation",
+      "destination": "/services/mold-remediation",
+      "permanent": true
+    },
+    {
+      "source": "/services/mold-remediation.html",
+      "destination": "/services/mold-remediation",
+      "permanent": true
+    },
+    {
+      "source": "/roof-leak-water-damage-restoration.html",
+      "destination": "/services/roof-leak-water-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/roof-leak-water-damage-restoration",
+      "destination": "/services/roof-leak-water-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/services/roof-leak-water-damage-restoration.html",
+      "destination": "/services/roof-leak-water-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/sewage-cleanup.html",
+      "destination": "/services/sewage-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/sewage-cleanup",
+      "destination": "/services/sewage-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/services/sewage-cleanup.html",
+      "destination": "/services/sewage-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/storm-damage-restoration.html",
+      "destination": "/services/storm-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/storm-damage-restoration",
+      "destination": "/services/storm-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/services/storm-damage-restoration.html",
+      "destination": "/services/storm-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/structural-drying.html",
+      "destination": "/services/structural-drying",
+      "permanent": true
+    },
+    {
+      "source": "/structural-drying",
+      "destination": "/services/structural-drying",
+      "permanent": true
+    },
+    {
+      "source": "/services/structural-drying.html",
+      "destination": "/services/structural-drying",
+      "permanent": true
+    },
+    {
+      "source": "/toilet-overflow-water-damage-cleanup.html",
+      "destination": "/services/toilet-overflow-water-damage-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/toilet-overflow-water-damage-cleanup",
+      "destination": "/services/toilet-overflow-water-damage-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/services/toilet-overflow-water-damage-cleanup.html",
+      "destination": "/services/toilet-overflow-water-damage-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/washing-machine-appliance-leak-cleanup.html",
+      "destination": "/services/washing-machine-appliance-leak-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/washing-machine-appliance-leak-cleanup",
+      "destination": "/services/washing-machine-appliance-leak-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/services/washing-machine-appliance-leak-cleanup.html",
+      "destination": "/services/washing-machine-appliance-leak-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-odor-musty-smell-removal.html",
+      "destination": "/services/water-damage-odor-musty-smell-removal",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-odor-musty-smell-removal",
+      "destination": "/services/water-damage-odor-musty-smell-removal",
+      "permanent": true
+    },
+    {
+      "source": "/services/water-damage-odor-musty-smell-removal.html",
+      "destination": "/services/water-damage-odor-musty-smell-removal",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration.html",
+      "destination": "/services/water-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration",
+      "destination": "/services/water-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/services/water-damage-restoration.html",
+      "destination": "/services/water-damage-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/water-heater-leak-cleanup.html",
+      "destination": "/services/water-heater-leak-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/water-heater-leak-cleanup",
+      "destination": "/services/water-heater-leak-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/services/water-heater-leak-cleanup.html",
+      "destination": "/services/water-heater-leak-cleanup",
+      "permanent": true
+    },
+    {
+      "source": "/wet-carpet-water-extraction-drying.html",
+      "destination": "/services/wet-carpet-water-extraction-drying",
+      "permanent": true
+    },
+    {
+      "source": "/wet-carpet-water-extraction-drying",
+      "destination": "/services/wet-carpet-water-extraction-drying",
+      "permanent": true
+    },
+    {
+      "source": "/services/wet-carpet-water-extraction-drying.html",
+      "destination": "/services/wet-carpet-water-extraction-drying",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration-in-college-park.html",
+      "destination": "/locations/water-damage-restoration-in-college-park",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration-in-college-park",
+      "destination": "/locations/water-damage-restoration-in-college-park",
+      "permanent": true
+    },
+    {
+      "source": "/locations/water-damage-restoration-in-college-park.html",
+      "destination": "/locations/water-damage-restoration-in-college-park",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration-in-downtown-orlando.html",
+      "destination": "/locations/water-damage-restoration-in-downtown-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration-in-downtown-orlando",
+      "destination": "/locations/water-damage-restoration-in-downtown-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/locations/water-damage-restoration-in-downtown-orlando.html",
+      "destination": "/locations/water-damage-restoration-in-downtown-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration-in-lake-nona.html",
+      "destination": "/locations/water-damage-restoration-in-lake-nona",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration-in-lake-nona",
+      "destination": "/locations/water-damage-restoration-in-lake-nona",
+      "permanent": true
+    },
+    {
+      "source": "/locations/water-damage-restoration-in-lake-nona.html",
+      "destination": "/locations/water-damage-restoration-in-lake-nona",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration-in-mills-50-district.html",
+      "destination": "/locations/water-damage-restoration-in-mills-50-district",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration-in-mills-50-district",
+      "destination": "/locations/water-damage-restoration-in-mills-50-district",
+      "permanent": true
+    },
+    {
+      "source": "/locations/water-damage-restoration-in-mills-50-district.html",
+      "destination": "/locations/water-damage-restoration-in-mills-50-district",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration-in-winter-park.html",
+      "destination": "/locations/water-damage-restoration-in-winter-park",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration-in-winter-park",
+      "destination": "/locations/water-damage-restoration-in-winter-park",
+      "permanent": true
+    },
+    {
+      "source": "/locations/water-damage-restoration-in-winter-park.html",
+      "destination": "/locations/water-damage-restoration-in-winter-park",
+      "permanent": true
+    },
+    {
+      "source": "/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes.html",
+      "destination": "/blog/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes",
+      "permanent": true
+    },
+    {
+      "source": "/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes",
+      "destination": "/blog/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes",
+      "permanent": true
+    },
+    {
+      "source": "/blog/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes.html",
+      "destination": "/blog/5-tips-for-effective-mold-remediation-in-downtown-orlando-homes",
+      "permanent": true
+    },
+    {
+      "source": "/basement-flooding-orlando-explained.html",
+      "destination": "/blog/basement-flooding-orlando-explained",
+      "permanent": true
+    },
+    {
+      "source": "/basement-flooding-orlando-explained",
+      "destination": "/blog/basement-flooding-orlando-explained",
+      "permanent": true
+    },
+    {
+      "source": "/blog/basement-flooding-orlando-explained.html",
+      "destination": "/blog/basement-flooding-orlando-explained",
+      "permanent": true
+    },
+    {
+      "source": "/first-24-hours-burst-pipe-orlando.html",
+      "destination": "/blog/first-24-hours-burst-pipe-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/first-24-hours-burst-pipe-orlando",
+      "destination": "/blog/first-24-hours-burst-pipe-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/blog/first-24-hours-burst-pipe-orlando.html",
+      "destination": "/blog/first-24-hours-burst-pipe-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/homeowners-insurance-water-damage-florida.html",
+      "destination": "/blog/homeowners-insurance-water-damage-florida",
+      "permanent": true
+    },
+    {
+      "source": "/homeowners-insurance-water-damage-florida",
+      "destination": "/blog/homeowners-insurance-water-damage-florida",
+      "permanent": true
+    },
+    {
+      "source": "/blog/homeowners-insurance-water-damage-florida.html",
+      "destination": "/blog/homeowners-insurance-water-damage-florida",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-choose-the-right-flood-damage-restoration-service-in-orlando.html",
+      "destination": "/blog/how-to-choose-the-right-flood-damage-restoration-service-in-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-choose-the-right-flood-damage-restoration-service-in-orlando",
+      "destination": "/blog/how-to-choose-the-right-flood-damage-restoration-service-in-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-choose-the-right-flood-damage-restoration-service-in-orlando.html",
+      "destination": "/blog/how-to-choose-the-right-flood-damage-restoration-service-in-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/prevent-mold-after-hurricane-flooding.html",
+      "destination": "/blog/prevent-mold-after-hurricane-flooding",
+      "permanent": true
+    },
+    {
+      "source": "/prevent-mold-after-hurricane-flooding",
+      "destination": "/blog/prevent-mold-after-hurricane-flooding",
+      "permanent": true
+    },
+    {
+      "source": "/blog/prevent-mold-after-hurricane-flooding.html",
+      "destination": "/blog/prevent-mold-after-hurricane-flooding",
+      "permanent": true
+    },
+    {
+      "source": "/signs-ceiling-leak-collapse.html",
+      "destination": "/blog/signs-ceiling-leak-collapse",
+      "permanent": true
+    },
+    {
+      "source": "/signs-ceiling-leak-collapse",
+      "destination": "/blog/signs-ceiling-leak-collapse",
+      "permanent": true
+    },
+    {
+      "source": "/blog/signs-ceiling-leak-collapse.html",
+      "destination": "/blog/signs-ceiling-leak-collapse",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration-cost-orlando.html",
+      "destination": "/blog/water-damage-restoration-cost-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-restoration-cost-orlando",
+      "destination": "/blog/water-damage-restoration-cost-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/blog/water-damage-restoration-cost-orlando.html",
+      "destination": "/blog/water-damage-restoration-cost-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/why-is-my-water-damage-restoration-taking-so-long-in-orlando.html",
+      "destination": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/why-is-my-water-damage-restoration-taking-so-long-in-orlando",
+      "destination": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando.html",
+      "destination": "/blog/why-is-my-water-damage-restoration-taking-so-long-in-orlando",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-categories-explained.html",
+      "destination": "/blog/water-damage-categories-explained",
+      "permanent": true
+    },
+    {
+      "source": "/water-damage-categories-explained",
+      "destination": "/blog/water-damage-categories-explained",
+      "permanent": true
+    },
+    {
+      "source": "/blog/water-damage-categories-explained.html",
+      "destination": "/blog/water-damage-categories-explained",
+      "permanent": true
+    },
+    {
+      "source": "/water-mitigation-vs-restoration.html",
+      "destination": "/blog/water-mitigation-vs-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/water-mitigation-vs-restoration",
+      "destination": "/blog/water-mitigation-vs-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/blog/water-mitigation-vs-restoration.html",
+      "destination": "/blog/water-mitigation-vs-restoration",
+      "permanent": true
+    },
+    {
+      "source": "/locations/services/structural-drying",
+      "destination": "/services/structural-drying",
+      "permanent": true
+    },
+    {
+      "source": "/locations/services/structural-drying.html",
+      "destination": "/services/structural-drying",
+      "permanent": true
+    }
   ]
 }
