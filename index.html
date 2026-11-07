@@ -510,6 +510,57 @@
         </div>
       </section>
 
+      <!-- 3b. Scroll Story: From Flooded to Dry Again -->
+      <style>
+        .water-story-card[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+        .water-story-card[data-reveal].is-visible{opacity:1;transform:none}
+        .water-story-card[data-reveal]:nth-child(2){transition-delay:.12s}
+        .water-story-card[data-reveal]:nth-child(3){transition-delay:.24s}
+        @media (prefers-reduced-motion: reduce){.water-story-card[data-reveal]{opacity:1;transform:none;transition:none}}
+      </style>
+      <section class="py-16 sm:py-20 bg-[#F5F6EF] border-b border-[#DBDFD1]" id="water-story" aria-label="How water damage gets fixed">
+        <div class="max-w-[1180px] mx-auto px-4 sm:px-6">
+          <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-12">
+            <span class="font-mono-custom text-xs font-bold uppercase tracking-widest text-[#B3502E] block mb-2">How It Works</span>
+            <h2 class="font-display text-4xl sm:text-5xl font-extrabold uppercase text-[#16302A] leading-tight">From Flooded to Dry Again</h2>
+            <p class="text-[#4C594E] text-base sm:text-lg mt-3">Three steps. No surprises. Here is how it works.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <article class="water-story-card bg-white rounded-lg border border-[#DBDFD1] overflow-hidden shadow-sm" data-reveal>
+              <img src="/water-story-flooded-home.webp" alt="A suburban Orlando home surrounded by floodwater after heavy rain" width="1200" height="800" loading="lazy" decoding="async" class="w-full aspect-[3/2] object-cover">
+              <div class="p-6">
+                <span class="font-mono-custom text-xs font-bold uppercase tracking-widest text-[#E8A33D] block mb-2">Step 1</span>
+                <h3 class="font-display text-2xl font-bold uppercase text-[#16302A] mb-2">Water Hits</h3>
+                <p class="text-[#4C594E] text-sm leading-relaxed">A burst pipe, a failed appliance, or storm flooding can soak a home in minutes &mdash; and in Orlando&rsquo;s humidity, mold can start within 24 to 48 hours.</p>
+              </div>
+            </article>
+            <article class="water-story-card bg-white rounded-lg border border-[#DBDFD1] overflow-hidden shadow-sm" data-reveal>
+              <img src="/water-story-moisture-check.webp" alt="A restoration technician checking a water-damaged wall with a moisture meter" width="1200" height="800" loading="lazy" decoding="async" class="w-full aspect-[3/2] object-cover">
+              <div class="p-6">
+                <span class="font-mono-custom text-xs font-bold uppercase tracking-widest text-[#E8A33D] block mb-2">Step 2</span>
+                <h3 class="font-display text-2xl font-bold uppercase text-[#16302A] mb-2">Fast Extraction</h3>
+                <p class="text-[#4C594E] text-sm leading-relaxed">Local crews arrive with industrial extractors, thermal imaging, and moisture meters to find every wet spot and pull the water out.</p>
+              </div>
+            </article>
+            <article class="water-story-card bg-white rounded-lg border border-[#DBDFD1] overflow-hidden shadow-sm" data-reveal>
+              <img src="/water-story-hardwood-drying.webp" alt="Air movers and drying mats drying a hardwood floor after water damage" width="1200" height="800" loading="lazy" decoding="async" class="w-full aspect-[3/2] object-cover">
+              <div class="p-6">
+                <span class="font-mono-custom text-xs font-bold uppercase tracking-widest text-[#E8A33D] block mb-2">Step 3</span>
+                <h3 class="font-display text-2xl font-bold uppercase text-[#16302A] mb-2">Drying &amp; Restoration</h3>
+                <p class="text-[#4C594E] text-sm leading-relaxed">Industrial air movers and dehumidifiers dry the structure, then damaged drywall and flooring are repaired or replaced &mdash; the home returned to its pre-loss condition.</p>
+              </div>
+            </article>
+          </div>
+          <div class="mt-10 text-center">
+            <a href="tel:+14075579924" class="inline-flex items-center justify-center gap-2 bg-[#E8A33D] hover:bg-[#C4831F] text-[#16302A] px-7 py-4 rounded-md font-bold text-base uppercase tracking-wider transition-all shadow-md hover:shadow-lg">Call (407) 557-9924</a>
+            <p class="text-[#4C594E] text-sm mt-3">Open 24 hours / 7 days a week / 365 days a year.</p>
+          </div>
+        </div>
+      </section>
+      <script>
+        (function(){var cards=document.querySelectorAll('.water-story-card[data-reveal]');if(!cards.length)return;if(!('IntersectionObserver' in window)){cards.forEach(function(c){c.classList.add('is-visible')});return;}var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{threshold:.15,rootMargin:'0px 0px -40px 0px'});cards.forEach(function(c){io.observe(c);});})();
+      </script>
+
       <!-- 4. Why Water Damage Escalates Faster in Orlando (6 Cards) -->
       <section class="py-20 lg:py-24 bg-[#EAEBE0] border-b border-[#DBDFD1]">
         <div class="max-w-[1180px] mx-auto px-4 sm:px-6">
