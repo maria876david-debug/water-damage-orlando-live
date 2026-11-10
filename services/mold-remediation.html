@@ -20,131 +20,122 @@
  <!-- Schema Markup: Unified @graph with LocalBusiness, Service, BreadcrumbList, FAQPage -->
  <script type="application/ld+json">
  {
- "@context": "https://schema.org",
- "@graph": [
- {
- "@type": ["LocalBusiness", "EmergencyService"],
- "@id": "https://www.waterdamagerestorationorlando.us/#business",
- "name": "Orlando Rapid Restoration - Mold Remediation",
- "url": "https://www.waterdamagerestorationorlando.us/services/mold-remediation",
- "logo": "https://www.waterdamagerestorationorlando.us/favicon.svg",
- "image": "https://www.waterdamagerestorationorlando.us/water_damage_hero_1784532073929.jpg",
- "telephone": "+1-407-557-9924",
- "priceRange": "$$",
- "description": "Certified mold inspection, HEPA air scrubbing, antifungal antimicrobial remediation, and third-party clearance testing across Orlando and Orange County.",
- "address": {
- "@type": "PostalAddress",
- "streetAddress": "100 N Orange Ave",
- "addressLocality": "Orlando",
- "addressRegion": "FL",
- "postalCode": "32801",
- "addressCountry": "US"
- },
- "geo": {
- "@type": "GeoCoordinates",
- "latitude": 28.5421,
- "longitude": -81.379
- },
- "openingHoursSpecification": [
- {
- "@type": "OpeningHoursSpecification",
- "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
- "opens": "00:00",
- "closes": "23:59"
- }
- ],
- "areaServed": [
- { "@type": "City", "name": "Orlando" },
- { "@type": "City", "name": "Winter Park" },
- { "@type": "AdministrativeArea", "name": "College Park" },
- { "@type": "AdministrativeArea", "name": "Lake Nona" },
- { "@type": "AdministrativeArea", "name": "Mills 50 District" },
- { "@type": "AdministrativeArea", "name": "Orange County" }
- ]
- },
- {
- "@type": "Service",
- "@id": "https://www.waterdamagerestorationorlando.us/services/mold-remediation#service",
- "name": "Certified Mold Remediation & Removal",
- "serviceType": "Mold Remediation and Containment",
- "provider": {
- "@id": "https://www.waterdamagerestorationorlando.us/#business"
- },
- "areaServed": {
- "@type": "AdministrativeArea",
- "name": "Greater Orlando, Orange County, FL"
- },
- "offers": {
- "@type": "Offer",
- "url": "https://www.waterdamagerestorationorlando.us/services/mold-remediation",
- "availability": "https://schema.org/InStock",
- "priceCurrency": "USD"
- },
- "description": "Full-containment toxic mold remediation, negative air pressure HEPA scrubbing, antimicrobial barrier application, and third-party lab air clearance testing in Orlando."
- },
- {
- "@type": "BreadcrumbList",
- "@id": "https://www.waterdamagerestorationorlando.us/services/mold-remediation#breadcrumb",
- "itemListElement": [
- {
- "@type": "ListItem",
- "position": 1,
- "name": "Home",
- "item": "https://www.waterdamagerestorationorlando.us/"
- },
- {
- "@type": "ListItem",
- "position": 2,
- "name": "Services",
- "item": "https://www.waterdamagerestorationorlando.us/services"
- },
- {
- "@type": "ListItem",
- "position": 3,
- "name": "Mold Remediation",
- "item": "https://www.waterdamagerestorationorlando.us/services/mold-remediation"
- }
- ]
- },
- {
- "@type": "FAQPage",
- "@id": "https://www.waterdamagerestorationorlando.us/services/mold-remediation#faq",
- "mainEntity": [
- {
- "@type": "Question",
- "name": "How quickly does mold develop after water damage in Orlando?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "In Central Florida's warm, humid climate (often 70%+ relative humidity), mold spores germinate and begin colonial growth within 24 to 48 hours of water exposure on porous surfaces such as drywall, carpet padding, and wood baseboards."
- }
- },
- {
- "@type": "Question",
- "name": "What does certified mold remediation involve under Florida licensing laws?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "Florida law (F.S. 468.8419) requires licensed mold remediators to maintain containment barriers under negative air pressure, capture microscopic spores with HEPA 500 air scrubbers, safely discard unrecoverable porous materials in sealed bags, fog with EPA-registered botanical antimicrobials, and coordinate independent post-remediation clearance testing."
- }
- },
- {
- "@type": "Question",
- "name": "Does homeowners insurance in Florida cover mold remediation?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "Most standard Florida homeowners policies cover mold damage when it results directly from a covered sudden and accidental water incident, such as a burst supply line or water heater failure, usually subject to a mold sub-limit ($10,000). We document the exact moisture origin to support your adjuster's claim."
- }
- },
- {
- "@type": "Question",
- "name": "Why is bleach ineffective for porous mold cleanup?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "Chlorine bleach is primarily water and surface sodium hypochlorite; it cannot penetrate the root structure (hyphae) of mold in porous materials like drywall and wood. The water in bleach actually feeds the roots beneath the surface. True remediation requires specialized antimicrobial disinfectants and physical extraction."
- }
- }
- ]
- }
- ]
+   "@context": "https://schema.org",
+   "@graph": [
+     {
+       "@type": [
+         "LocalBusiness",
+         "EmergencyService"
+       ],
+       "@id": "https://www.waterdamagerestorationorlando.us/#business",
+       "name": "Orlando Rapid Restoration - Mold Remediation",
+       "url": "https://www.waterdamagerestorationorlando.us/services/mold-remediation",
+       "logo": "https://www.waterdamagerestorationorlando.us/favicon.svg",
+       "image": "https://www.waterdamagerestorationorlando.us/water_damage_hero_1784532073929.jpg",
+       "telephone": "+1-407-557-9924",
+       "priceRange": "$$",
+       "description": "Certified mold inspection, HEPA air scrubbing, antifungal antimicrobial remediation, and third-party clearance testing across Orlando and Orange County.",
+       "address": {
+         "@type": "PostalAddress",
+         "streetAddress": "100 N Orange Ave",
+         "addressLocality": "Orlando",
+         "addressRegion": "FL",
+         "postalCode": "32801",
+         "addressCountry": "US"
+       },
+       "geo": {
+         "@type": "GeoCoordinates",
+         "latitude": 28.5421,
+         "longitude": -81.379
+       },
+       "openingHoursSpecification": [
+         {
+           "@type": "OpeningHoursSpecification",
+           "dayOfWeek": [
+             "Monday",
+             "Tuesday",
+             "Wednesday",
+             "Thursday",
+             "Friday",
+             "Saturday",
+             "Sunday"
+           ],
+           "opens": "00:00",
+           "closes": "23:59"
+         }
+       ],
+       "areaServed": [
+         {
+           "@type": "City",
+           "name": "Orlando"
+         },
+         {
+           "@type": "City",
+           "name": "Winter Park"
+         },
+         {
+           "@type": "AdministrativeArea",
+           "name": "College Park"
+         },
+         {
+           "@type": "AdministrativeArea",
+           "name": "Lake Nona"
+         },
+         {
+           "@type": "AdministrativeArea",
+           "name": "Mills 50 District"
+         },
+         {
+           "@type": "AdministrativeArea",
+           "name": "Orange County"
+         }
+       ]
+     },
+     {
+       "@type": "Service",
+       "@id": "https://www.waterdamagerestorationorlando.us/services/mold-remediation#service",
+       "name": "Mold Remediation & Removal",
+       "serviceType": "Mold Remediation and Containment",
+       "provider": {
+         "@id": "https://www.waterdamagerestorationorlando.us/#business"
+       },
+       "areaServed": {
+         "@type": "AdministrativeArea",
+         "name": "Greater Orlando, Orange County, FL"
+       },
+       "offers": {
+         "@type": "Offer",
+         "url": "https://www.waterdamagerestorationorlando.us/services/mold-remediation",
+         "availability": "https://schema.org/InStock",
+         "priceCurrency": "USD"
+       },
+       "description": "Full-containment toxic mold remediation, negative air pressure HEPA scrubbing, antimicrobial barrier application, and third-party lab air clearance testing in Orlando."
+     },
+     {
+       "@type": "BreadcrumbList",
+       "@id": "https://www.waterdamagerestorationorlando.us/services/mold-remediation#breadcrumb",
+       "itemListElement": [
+         {
+           "@type": "ListItem",
+           "position": 1,
+           "name": "Home",
+           "item": "https://www.waterdamagerestorationorlando.us/"
+         },
+         {
+           "@type": "ListItem",
+           "position": 2,
+           "name": "Services",
+           "item": "https://www.waterdamagerestorationorlando.us/services"
+         },
+         {
+           "@type": "ListItem",
+           "position": 3,
+           "name": "Mold Remediation",
+           "item": "https://www.waterdamagerestorationorlando.us/services/mold-remediation"
+         }
+       ]
+     }
+   ]
  }
  </script>
 
@@ -986,7 +977,7 @@
  <p class="text-muted-foreground text-lg">Here's what you can expect during our Mold Remediation in Orlando.</p>
  </div>
  <div class="max-w-4xl mx-auto space-y-8">
- <div class="flex gap-6 items-start"><div class="shrink-0 w-14 h-14 rounded-full bg-accent-primary flex items-center justify-center text-white font-bold text-xl">1</div><div class="pt-2"><h3 class="text-xl font-semibold text-foreground mb-2">Inspection</h3><p class="text-muted-foreground leading-relaxed">Our certified technicians conduct a thorough inspection of your property to identify mold sources and assess damage. This step is crucial for developing an effective remediation plan.</p></div></div>
+ <div class="flex gap-6 items-start"><div class="shrink-0 w-14 h-14 rounded-full bg-accent-primary flex items-center justify-center text-white font-bold text-xl">1</div><div class="pt-2"><h3 class="text-xl font-semibold text-foreground mb-2">Inspection</h3><p class="text-muted-foreground leading-relaxed">Our technicians conduct a thorough inspection of your property to identify mold sources and assess damage. This step is crucial for developing an effective remediation plan.</p></div></div>
  <div class="flex gap-6 items-start"><div class="shrink-0 w-14 h-14 rounded-full bg-accent-primary flex items-center justify-center text-white font-bold text-xl">2</div><div class="pt-2"><h3 class="text-xl font-semibold text-foreground mb-2">Containment</h3><p class="text-muted-foreground leading-relaxed">We establish containment areas to prevent mold spores from spreading during the removal process. This ensures that the rest of your home remains safe and unaffected.</p></div></div>
  <div class="flex gap-6 items-start"><div class="shrink-0 w-14 h-14 rounded-full bg-accent-primary flex items-center justify-center text-white font-bold text-xl">3</div><div class="pt-2"><h3 class="text-xl font-semibold text-foreground mb-2">Mold Removal</h3><p class="text-muted-foreground leading-relaxed">Using specialized tools and techniques, we remove all traces of mold from your home. This includes treating affected areas with mold-resistant solutions.</p></div></div>
  <div class="flex gap-6 items-start"><div class="shrink-0 w-14 h-14 rounded-full bg-accent-primary flex items-center justify-center text-white font-bold text-xl">4</div><div class="pt-2"><h3 class="text-xl font-semibold text-foreground mb-2">Cleaning and Sanitization</h3><p class="text-muted-foreground leading-relaxed">After removal, we thoroughly clean and sanitize the affected areas to eliminate any remaining spores and prevent future growth.</p></div></div>
@@ -1003,10 +994,10 @@
  <p class="text-muted-foreground text-lg">Our Mold Remediation in Orlando stands out for its quality and reliability.</p>
  </div>
  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
- <div class="p-6 rounded-2xl bg-background border border-border text-center"><div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-accent-primary/10 flex items-center justify-center"><svg class="w-7 h-7 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="text-lg font-semibold text-foreground mb-2">Local Pros</h3><p class="text-sm text-muted-foreground">Our team consists of certified mold remediation experts, ensuring your home is treated with the utmost care and expertise.</p></div>
+ <div class="p-6 rounded-2xl bg-background border border-border text-center"><div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-accent-primary/10 flex items-center justify-center"><svg class="w-7 h-7 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="text-lg font-semibold text-foreground mb-2">Local Pros</h3><p class="text-sm text-muted-foreground">Our team consists of mold remediation experts, ensuring your home is treated with the utmost care and expertise.</p></div>
  <div class="p-6 rounded-2xl bg-background border border-border text-center"><div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-accent-primary/10 flex items-center justify-center"><svg class="w-7 h-7 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="text-lg font-semibold text-foreground mb-2">24/7 Emergency Services</h3><p class="text-sm text-muted-foreground">We offer 24/7 Mold Remediation Orlando services, ready to respond to your mold emergencies at any time.</p></div>
  <div class="p-6 rounded-2xl bg-background border border-border text-center"><div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-accent-primary/10 flex items-center justify-center"><svg class="w-7 h-7 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="text-lg font-semibold text-foreground mb-2">Affordable Solutions</h3><p class="text-sm text-muted-foreground">We provide affordable mold removal Orlando services without compromising on quality, making it accessible for all homeowners.</p></div>
- <div class="p-6 rounded-2xl bg-background border border-border text-center"><div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-accent-primary/10 flex items-center justify-center"><svg class="w-7 h-7 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="text-lg font-semibold text-foreground mb-2">Satisfaction Guarantee</h3><p class="text-sm text-muted-foreground">We stand behind our work with a satisfaction guarantee, ensuring you are happy with the results of our mold remediation services.</p></div>
+ <div class="p-6 rounded-2xl bg-background border border-border text-center"><div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-accent-primary/10 flex items-center justify-center"><svg class="w-7 h-7 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><h3 class="text-lg font-semibold text-foreground mb-2">Satisfaction</h3><p class="text-sm text-muted-foreground">We stand behind our work, ensuring you are happy with the results of our mold remediation services.</p></div>
  </div>
  </div>
  </section>
@@ -1080,7 +1071,7 @@
  <div class="w-8 h-8 rounded bg-[#254E44] text-[#E8A33D] flex items-center justify-center font-bold text-sm shrink-0">24</div>
  <div>
  <span class="text-white font-bold uppercase block tracking-wider">Orange County 24/7 Dispatch</span>
- <span>Average Arrival Time: &le;45 Min<br/>100 N Orange Ave, Orlando, FL 32801<br/>Direct: <a href="tel:+14075579924" class="text-[#E8A33D] hover:underline font-bold">(407) 557-9924</a></span>
+ <span>100 N Orange Ave, Orlando, FL 32801<br/>Direct: <a href="tel:+14075579924" class="text-[#E8A33D] hover:underline font-bold">(407) 557-9924</a></span>
  </div>
  </div>
  </div>
@@ -1097,7 +1088,7 @@
  </span>
  </a>
  <p class="text-xs text-[#F5F6EF]/70 leading-relaxed max-w-sm">
- State-certified mold remediation, full-containment air scrubbing, and structural moisture elimination serving homeowners and businesses across Orlando and Orange County today.
+ Mold remediation, full-containment air scrubbing, and structural moisture elimination serving homeowners and businesses across Orlando and Orange County today.
  </p>
  <address class="not-italic text-xs font-mono-custom text-[#F5F6EF]/90 space-y-1.5 pt-2">
  <p><strong class="text-white">Address:</strong> 100 N Orange Ave, Orlando, FL 32801</p>
@@ -1156,7 +1147,7 @@
  <ul class="space-y-2 text-xs text-[#F5F6EF]/80">
  <li><a href="/services/water-damage-restoration" class="hover:text-[#E8A33D] transition-colors">Emergency Water Extraction</a></li>
  <li><a href="/services/structural-drying" class="hover:text-[#E8A33D] transition-colors">Industrial Structural Drying</a></li>
- <li><a href="/services/mold-remediation" class="hover:text-[#E8A33D] transition-colors font-bold text-white">Certified Mold Remediation &rarr;</a></li>
+ <li><a href="/services/mold-remediation" class="hover:text-[#E8A33D] transition-colors font-bold text-white">Mold Remediation &rarr;</a></li>
  <li><a href="/services/flood-damage-restoration" class="hover:text-[#E8A33D] transition-colors">Storm &amp; Hurricane Flood Recovery</a></li>
  <li><a href="/services/sewage-cleanup" class="hover:text-[#E8A33D] transition-colors">Category 3 Sewage &amp; Black Water Cleanup</a></li>
  <li><a href="/services/dehumidification-services" class="hover:text-[#E8A33D] transition-colors">Dehumidification &amp; Moisture Control</a></li>
@@ -1201,7 +1192,7 @@
  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#16302A]/95 backdrop-blur-md border-t border-[#254E44] p-3 shadow-2xl flex items-center justify-between gap-3">
  <div class="flex flex-col">
  <span class="text-[10px] font-mono-custom uppercase tracking-wider text-[#E8A33D] font-bold">24/7 Mold Response</span>
- <span class="text-xs text-[#F5F6EF] font-bold">&le;45 Min Orlando Arrival</span>
+ <span class="text-xs text-[#F5F6EF] font-bold">Orlando, FL</span>
  </div>
  <a 
  href="tel:+14075579924" 
