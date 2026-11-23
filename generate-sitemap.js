@@ -179,7 +179,6 @@ function generateSitemap() {
 Allow: /
 
 Sitemap: ${DOMAIN}/sitemap_index.xml
-Sitemap: ${DOMAIN}/sitemap.xml
 `;
 
   const sitemapFiles = {
