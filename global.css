@@ -1,29 +1,29 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #1a1b1e;
+  --background: #101A21;
   --foreground: #f0f0f0;
-  --card: #222327;
+  --card: #1E2E3A;
   --card-foreground: #f0f0f0;
-  --popover: #222327;
+  --popover: #1E2E3A;
   --popover-foreground: #f0f0f0;
-  --primary: #8c5cff;
+  --primary: #7C5CFF;
   --primary-foreground: #ffffff;
-  --secondary: #2a2c33;
+  --secondary: #2C4252;
   --secondary-foreground: #f0f0f0;
-  --muted: #2a2c33;
+  --muted: #2C4252;
   --muted-foreground: #a0a0a0;
-  --accent: #1e293b;
-  --accent-foreground: #79c0ff;
+  --accent: #16222B;
+  --accent-foreground: #B7A6FF;
   --destructive: #f87171;
   --destructive-foreground: #ffffff;
-  --border: #33353a;
-  --input: #33353a;
-  --ring: #8c5cff;
+  --border: #2C4252;
+  --input: #2C4252;
+  --ring: #7C5CFF;
 
-  --font-sans: DM Sans, sans-serif;
-  --font-serif: DM Sans, sans-serif;
-  --font-mono: Space Mono, monospace;
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Archivo', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
   --radius: 1rem;
   --shadow-x: 0px;
   --shadow-y: 0px;
@@ -53,9 +53,9 @@
   --spacing: 0.25rem;
 
   /* Extended theme tokens */
-  --accent-primary: #8c5cff;
-  --accent-secondary: #79c0ff;
-  --accent-glow: #8c5cff;
+  --accent-primary: #7C5CFF;
+  --accent-secondary: #B7A6FF;
+  --accent-glow: #7C5CFF;
 }
 
 /* Universal mobile safety net — `overflow-x: clip` blocks any horizontal

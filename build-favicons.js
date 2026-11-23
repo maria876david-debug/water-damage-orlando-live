@@ -6,22 +6,22 @@ import pngToIco from 'png-to-ico';
 const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@900&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&amp;display=swap');
       .brand-text {
-        font-family: 'Big Shoulders Display', 'Arial Black', 'Impact', sans-serif;
+        font-family: 'Archivo', 'Arial Black', 'Impact', sans-serif;
         font-weight: 900;
         font-size: 270px;
-        fill: #E8A33D;
+        fill: #7C5CFF;
         text-anchor: middle;
         dominant-baseline: central;
         letter-spacing: -6px;
       }
     </style>
   </defs>
-  <!-- Dark Cypress Green Background with Rounded Corners -->
-  <rect width="512" height="512" rx="108" ry="108" fill="#16302A"/>
+  <!-- Storm Slate Background with Rounded Corners (V2) -->
+  <rect width="512" height="512" rx="108" ry="108" fill="#101A21"/>
   
-  <!-- Citrus Gold OR Mark -->
+  <!-- Violet OR Mark (V2) -->
   <text x="256" y="262" class="brand-text">OR</text>
 </svg>`;
 
@@ -95,8 +95,8 @@ async function generateFavicons() {
         type: "image/png"
       }
     ],
-    theme_color: "#16302A",
-    background_color: "#16302A",
+    theme_color: "#101A21",
+    background_color: "#101A21",
     display: "standalone"
   };
 
