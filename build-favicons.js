@@ -4,25 +4,12 @@ import sharp from 'sharp';
 import pngToIco from 'png-to-ico';
 
 const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@900&amp;display=swap');
-      .brand-text {
-        font-family: 'Archivo', 'Arial Black', 'Impact', sans-serif;
-        font-weight: 900;
-        font-size: 270px;
-        fill: #7C5CFF;
-        text-anchor: middle;
-        dominant-baseline: central;
-        letter-spacing: -6px;
-      }
-    </style>
-  </defs>
-  <!-- Storm Slate Background with Rounded Corners (V2) -->
+  <!-- Storm Slate Background with Rounded Corners (V3) -->
   <rect width="512" height="512" rx="108" ry="108" fill="#101A21"/>
-  
-  <!-- Violet OR Mark (V2) -->
-  <text x="256" y="262" class="brand-text">OR</text>
+
+  <!-- Violet Water Droplet Mark (V3) -->
+  <path d="M256 84 C256 84 148 258 148 332 a108 108 0 0 0 216 0 C364 258 256 84 256 84 Z" fill="#7C5CFF"/>
+  <ellipse cx="216" cy="330" rx="17" ry="30" fill="#FFFFFF" opacity="0.35" transform="rotate(18 216 330)"/>
 </svg>`;
 
 async function generateFavicons() {
