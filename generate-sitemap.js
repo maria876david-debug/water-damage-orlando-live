@@ -179,6 +179,22 @@ function generateSitemap() {
 Allow: /
 
 Sitemap: ${DOMAIN}/sitemap_index.xml
+
+# AI search and assistant crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: Bingbot
+Allow: /
 `;
 
   const sitemapFiles = {
