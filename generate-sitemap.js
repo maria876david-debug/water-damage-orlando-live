@@ -117,6 +117,8 @@ function generateSitemap() {
 
   files.forEach(file => {
     const info = getRouteInfo(file);
+    // Never list the error page itself in the sitemap (A-17 fix, 25 Nov 2026)
+    if (info.pathName === '/404') return;
     if (!routesMap.has(info.loc)) {
       routesMap.set(info.loc, info);
     }
