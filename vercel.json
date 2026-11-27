@@ -44,6 +44,11 @@
       "permanent": true
     },
     {
+      "source": "/disclaimer.html",
+      "destination": "/disclaimer",
+      "permanent": true
+    },
+    {
       "source": "/insurance-guide.html",
       "destination": "/insurance-guide",
       "permanent": true
